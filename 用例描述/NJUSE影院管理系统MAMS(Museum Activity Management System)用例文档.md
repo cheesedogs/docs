@@ -1,0 +1,340 @@
+# NJUSE影院管理系统MAMS(Museum Activity Management System)用例文档
+
+
+<a name="a38517d1"></a>
+# V1.2 正式版
+
+
+<a name="0eb56b8a"></a>
+## 2019/03/17
+
+
+<a name="d5dcc4ad"></a>
+## 更新历史
+
+| 修改人员 | 日期 | 变更原因 | 版本号 |
+| --- | --- | --- | --- |
+| 许竣博 | 2019/03/17 | 最初的草稿 | V0.9 beta版 |
+| 江辉 | 2019/03/19 | 统一文档格式 | V0.91 beta版 |
+| 周际宇 | 2019/03/28 | 修改文档互评中对方指出的不合适的地方 | V1.0 正式版 |
+
+
+<a name="767fa455"></a>
+## 目录
+
+* [1.引言](#1%E5%BC%95%E8%A8%80)
+  * [1.1 目标](#11-%E7%9B%AE%E6%A0%87)
+  * [1.2 阅读说明](#12-%E9%98%85%E8%AF%BB%E8%AF%B4%E6%98%8E)
+  * [1.3 参考文献](#13-%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE)
+* [2.用例图](#2%E7%94%A8%E4%BE%8B%E5%9B%BE)
+* [3.用例列表](#3%E7%94%A8%E4%BE%8B%E5%88%97%E8%A1%A8)
+* [4.详细用例描述](#4%E8%AF%A6%E7%BB%86%E7%94%A8%E4%BE%8B%E6%8F%8F%E8%BF%B0)
+  * [用例1 上架影片](#%E7%94%A8%E4%BE%8B1-%E4%B8%8A%E6%9E%B6%E5%BD%B1%E7%89%87)
+  * [用例2 查看影片详情](#%E7%94%A8%E4%BE%8B2-%E6%9F%A5%E7%9C%8B%E5%BD%B1%E7%89%87%E8%AF%A6%E6%83%85)
+  * [用例3 统计预售影片的想看人数](#%E7%94%A8%E4%BE%8B3-%E7%BB%9F%E8%AE%A1%E9%A2%84%E5%94%AE%E5%BD%B1%E7%89%87%E7%9A%84%E6%83%B3%E7%9C%8B%E4%BA%BA%E6%95%B0)
+  * [用例4 标记某电影为想看](#%E7%94%A8%E4%BE%8B4-%E6%A0%87%E8%AE%B0%E6%9F%90%E7%94%B5%E5%BD%B1%E4%B8%BA%E6%83%B3%E7%9C%8B)
+  * [用例5 搜索电影(日期，名称等)](#%E7%94%A8%E4%BE%8B5-%E6%90%9C%E7%B4%A2%E7%94%B5%E5%BD%B1%E6%97%A5%E6%9C%9F%E5%90%8D%E7%A7%B0%E7%AD%89)
+* [5.需求分析模型](#5%E9%9C%80%E6%B1%82%E5%88%86%E6%9E%90%E6%A8%A1%E5%9E%8B)
+  * [5.1 系统顺序图](#51-%E7%B3%BB%E7%BB%9F%E9%A1%BA%E5%BA%8F%E5%9B%BE)
+    * [用例1 上架电影](#%E7%94%A8%E4%BE%8B1-%E4%B8%8A%E6%9E%B6%E7%94%B5%E5%BD%B1)
+    * [用例2 查看影片详情](#%E7%94%A8%E4%BE%8B2-%E6%9F%A5%E7%9C%8B%E5%BD%B1%E7%89%87%E8%AF%A6%E6%83%85-1)
+    * [用例3 统计预售影片想看人数](#%E7%94%A8%E4%BE%8B3-%E7%BB%9F%E8%AE%A1%E9%A2%84%E5%94%AE%E5%BD%B1%E7%89%87%E6%83%B3%E7%9C%8B%E4%BA%BA%E6%95%B0)
+    * [用例4 标记影片为想看](#%E7%94%A8%E4%BE%8B4-%E6%A0%87%E8%AE%B0%E5%BD%B1%E7%89%87%E4%B8%BA%E6%83%B3%E7%9C%8B)
+    * [用例5 搜索电影](#%E7%94%A8%E4%BE%8B5-%E6%90%9C%E7%B4%A2%E7%94%B5%E5%BD%B1)
+  * [5.2 概念类图](#52-%E6%A6%82%E5%BF%B5%E7%B1%BB%E5%9B%BE)
+    * [用例1 上架影片](#%E7%94%A8%E4%BE%8B1-%E4%B8%8A%E6%9E%B6%E5%BD%B1%E7%89%87)
+    * [用例2 查看影片详情](#%E7%94%A8%E4%BE%8B2-%E6%9F%A5%E7%9C%8B%E5%BD%B1%E7%89%87%E8%AF%A6%E6%83%85)
+    * [用例3 统计预售影片想看人数](#%E7%94%A8%E4%BE%8B3-%E7%BB%9F%E8%AE%A1%E9%A2%84%E5%94%AE%E5%BD%B1%E7%89%87%E6%83%B3%E7%9C%8B%E4%BA%BA%E6%95%B0)
+    * [用例4 标记影片为想看](#%E7%94%A8%E4%BE%8B4-%E6%A0%87%E8%AE%B0%E5%BD%B1%E7%89%87%E4%B8%BA%E6%83%B3%E7%9C%8B)
+    * [用例5 搜索电影](#%E7%94%A8%E4%BE%8B5-%E6%90%9C%E7%B4%A2%E7%94%B5%E5%BD%B1)
+  * [5.3状态图](#53%E7%8A%B6%E6%80%81%E5%9B%BE)
+    * [用例1 上架影片](#%E7%94%A8%E4%BE%8B1-%E4%B8%8A%E6%9E%B6%E5%BD%B1%E7%89%87)
+    * [用例2 查看影片详情](#%E7%94%A8%E4%BE%8B2-%E6%9F%A5%E7%9C%8B%E5%BD%B1%E7%89%87%E8%AF%A6%E6%83%85)
+    * [用例3 统计预售影片想看人数](#%E7%94%A8%E4%BE%8B3-%E7%BB%9F%E8%AE%A1%E9%A2%84%E5%94%AE%E5%BD%B1%E7%89%87%E6%83%B3%E7%9C%8B%E4%BA%BA%E6%95%B0)
+    * [用例4 标记影片为想看](#%E7%94%A8%E4%BE%8B4-%E6%A0%87%E8%AE%B0%E5%BD%B1%E7%89%87%E4%B8%BA%E6%83%B3%E7%9C%8B)
+    * [用例5 搜索电影](#%E7%94%A8%E4%BE%8B5-%E6%90%9C%E7%B4%A2%E7%94%B5%E5%BD%B1)
+
+
+<a name="cc1e61c5"></a>
+## 1.引言
+
+本文档描述了影院活动管理系统的用户及管理者需求。开发小组的软件系统实现与验证工作都以此文档为依据。
+
+本文档所包含的需求等级用数字表示，数值越高优先级越高。
+
+本文档的内容可能在项目实施过程中发生变更，但是必须由项目小组成员发出变更请求，小组讨论，最终决定，建立持续有效的版本控制。
+
+
+<a name="7ec68dad"></a>
+### 1.1 目标
+
+本文档描述了影院活动管理系统的用户需求。
+
+
+<a name="24d53836"></a>
+### 1.2 阅读说明
+
+无
+
+
+<a name="1b49fa7c"></a>
+### 1.3 参考文献
+
+无
+
+
+<a name="94d7c826"></a>
+## 2.用例图
+
+![](https://cdn.nlark.com/yuque/0/2019/png/291791/1553083674015-ed88f39f-1159-4a77-9887-4daf68fd8100.png#align=left&display=inline&height=531&originHeight=1025&originWidth=1440&size=0&status=done&width=746#align=left&display=inline&height=531&originHeight=1025&originWidth=1440&status=done&width=746)
+
+
+<a name="b1cc369f"></a>
+## 3.用例列表
+
+| 参与者 | 用例 |
+| --- | --- |
+| 影院总经理 | 1.上架电影 |
+| 市场调研人员 | 2.统计预售电影的想看人数 |
+| 观众 | 3.查看电影详情 |
+|  | 4.某电影为“想看” |
+|  | 5.搜索电影(日期，名称等) |
+
+
+
+<a name="5fbc9430"></a>
+## 4.详细用例描述
+
+
+
+
+<a name="6d9e3250"></a>
+### 用例1 上架影片
+
+| ID | 0001 | 名称 | 上架电影 |
+| --- | --- | --- | --- |
+| 创建者 | 江辉 | 最后一次更新者 | 江辉 |
+| 创建日期 | 2019/3/17 | 最后更新日期 | 2019/3/19 |
+| 参与者 | 影院总经理，目的是往系统中添加需要上架的影片信息 |  |  |
+| 触发条件 | 影院总经理根据市场调研及会议讨论结果需要上架影片 |  |  |
+| 前置条件 | 1、用户身份为总经理<br />2、最新市场调研结果已出<br />3、总经理决定上架影片 |  |  |
+| 后置条件 | 1、系统中已上架影片发生预期中的更改 |  |  |
+| 优先级 | 1000 |  |  |
+| 正常流程 | 1、系统预览影片上架信息 |  |  |
+|  | 2、总经理在影片库中输入影片名或影片ID搜索并选择需要上架的影片 |  |  |
+|  | 3、系统显示影片信息 |  |  |
+|  | 4、总经理总经理确认影片的信息，影片信息包括影片名、影片ID、影片类型、上映的时间、票价、想看人数统计、剧情介绍、演职人员、图集，并编辑未填写的必填信息，必填信息包括影片ID、上映时间、票价、特价信息 |  |  |
+|  | 5、总经理向系统提交上架该影片 |  |  |
+|  | 6、系统记录并显示已上架的影片清单，电影清单由多个影片预览图组成，影片预览图结构为影片海报+电影片名+上映时间+票价 |  |  |
+|  | 总经理重复1-5步，直到完成所有影片的上架 |  |  |
+|  | 7、总经理结束上架影片，系统显示所有已上架的影片预览图 |  |  |
+|  | 8、总经理确认后退出影片上架窗口 |  |  |
+| 扩展流程 | 1a、总经理需要取消上架中的部分影片 |  |  |
+|  | 1、总经理点击取消按钮删除选中的影片 |  |  |
+|  | 2a、影片库中没有需要上架的影片： |  |  |
+|  | 1、系统显示库中没有该影片，提示是否输入错误 |  |  |
+|  | 2、返回正常步骤2 |  |  |
+|  | 5a、影片必填信息没有全部填写 |  |  |
+|  | 1、系统提示错误并将页面调整到未填写的信息位置 |  |  |
+|  | 2、总经理取消上架该影片的操作并返回步骤1或补充未填写的信息 |  |  |
+|  | 8a、总经理需要补充上架影片 |  |  |
+|  | 1、总经理点击按钮返回正常步骤2 |  |  |
+| 特殊需求 | 无 |  |  |
+
+
+
+<a name="63ccc28b"></a>
+### 用例2 查看影片详情
+
+| ID | 0002 | 名称 | 查看影片详情 |
+| --- | --- | --- | --- |
+| 创建者 | 许竣博 | 最后一次更新者 | 许竣博 |
+| 创建日期 | 2019/3/18 | 最后更新日期 | 2019/3/19 |
+| 参与者 | 观众，目的是查看电影详情了解影片详细信息 |  |  |
+| 触发条件 | 用户发起查看影片详情的请求 |  |  |
+| 前置条件 | 1、用户已经登录成功<br />2、用户查看已上架的影片 |  |  |
+| 后置条件 | 1、系统中已上架影片发生预期中的更改 |  |  |
+| 优先级 | 700 |  |  |
+| 正常流程 | 1、用户点击某部影片查看详情 |  |  |
+|  | 2、系统返回该影片详情 |  |  |
+|  | 3、用户退出查看影片详情 |  |  |
+|  | 4、系统显示退出成功 |  |  |
+|  | 用户重复1-4步，直至查看影片详情的需求完全满足 |  |  |
+| 扩展流程 | 2a、用户进入影片详情页 |  |  |
+|  | 1、用户查看具体信息 |  |  |
+|  | 2、系统显示具体信息（包括：影片名、影片ID、影片类型、上映的时间、票价、想看人数统计、剧情介绍、演职人员、图集，并编辑未填写的必填信息，必填信息包括影片ID、上映时间、票价、特价信息） |  |  |
+| 特殊需求 | 无 |  |  |
+
+
+
+<a name="11f399ee"></a>
+### 用例3 统计预售影片的想看人数
+
+| ID | 0003 | 名称 | 统计预售影片想看人数 |
+| --- | --- | --- | --- |
+| 创建者 | 江辉 | 最后一次更新者 | 江辉 |
+| 创建日期 | 2019/3/17 | 最后更新日期 | 2019/3/19 |
+| 参与者 | 市场调研人员，目的是统计预售影片的想看人数 |  |  |
+| 触发条件 | 市场调研人员想要统计预售中的影片被标记为想看的人数 |  |  |
+| 前置条件 | 用户身份为市场调研人员或更高级用户，目前更高级用户只有总经理 |  |  |
+| 后置条件 | 无 |  |  |
+| 优先级 | 800 |  |  |
+| 正常流程 | 1、系统显示影片库总览，显示所有影片预览图 |  |  |
+|  | 2、用户在影片库中输入影片名或影片ID搜索并选择需要统计的影片 |  |  |
+|  | 3、系统显示数据库中该电影的信息，包括影片名、影片ID、影片类型、上映的时间、票价、想看人数统计、剧情介绍、演职人员、图集影片名、影片ID、影片类型、上映的时间、票价、想看人数统计、剧情介绍、演职人员、图集 |  |  |
+|  | 4、用户重复1-3步，直到完成所有需要统计的影片数据 |  |  |
+|  | 5、用户退出系统数据库 |  |  |
+| 扩展流程 | 2a、用户在筛选工具中输入条件 |  |  |
+|  | 1、系统根据条件显示筛选结果中的影片预览图 |  |  |
+|  | 2、用户选择需要统计的影片 |  |  |
+|  | 2b、影片库中没有需要统计的影片： |  |  |
+|  | 1、系统显示库中没有该影片，提示是否输入错误 |  |  |
+|  | 2、返回正常步骤2 |  |  |
+| 特殊需求 | 无 |  |  |
+
+
+
+<a name="d08e9002"></a>
+### 用例4 标记某电影为想看
+
+| ID | 0004 | 名称 | 标记影片为想看 |
+| --- | --- | --- | --- |
+| 创建者 | 刘涛 | 最后一次更新者 | 江辉 |
+| 创建日期 | 2019/3/18 | 最后更新日期 | 2019/3/19 |
+| 参与者 | 观众，目的是及时记录用户想看却未看的影片，方便观众观影前查看自己之前的打算 |  |  |
+| 触发条件 | 观众浏览某影片信息，想要观看但客观条件限制 |  |  |
+| 前置条件 | 1、观众必须已经被识别并授权<br />2、该影片信息已发布 |  |  |
+| 后置条件 | 无 |  |  |
+| 优先级 | 700 |  |  |
+| <br /><br />正常流程 | 1、用户身份验证 |  |  |
+|  | 2、观众进入系统的数据库 |  |  |
+|  | 3、观众进入某影片详情页 |  |  |
+|  | 4、系统显示数据库中该电影的信息，包括影片名、影片ID、影片类型、上映的时间、票价、想看人数统计、剧情介绍、演职人员、图集影片名、影片ID、影片类型、上映的时间、票价、想看人数统计、剧情介绍、演职人员、图集 |  |  |
+|  | 5、观众标记该影片为想看 |  |  |
+|  | 6、提示观众标记成功 |  |  |
+|  | 7、观众退出系统数据库重复2~5步，直到标记完所有想要观看的影片 |  |  |
+|  | 8、系统数据库更新，返回更新后的列表 |  |  |
+|  | 9、用户退出系统数据库 |  |  |
+| 扩展流程 | 1a、非法用户ID或用户权限不足 |  |  |
+|  | 1、系统提示错误并拒绝用户进入系统数据库 |  |  |
+|  | 2a、影片库中没有需要统计的电影： |  |  |
+|  | 1、系统显示库中没有该影片，提示是否输入错误 |  |  |
+|  | 2、返回正常步骤2 |  |  |
+|  | 4a、标记失败 |  |  |
+|  | 1、提示观众标记失败 |  |  |
+|  | 2、返回正常步骤3 |  |  |
+| 特殊需求 | 无 |  |  |
+
+
+
+<a name="183737d8"></a>
+### 用例5 搜索电影(日期，名称等)
+
+| ID | 0005 | 名称 | 搜索影片 |
+| --- | --- | --- | --- |
+| 创建者 | 周际宇 | 最后一次更新者 | 江辉 |
+| 创建日期 | 2019/3/17 | 最后更新日期 | 2019/3/19 |
+| 参与者 | 观众，目标是能够根据所给关键字搜索电影并正确显示符合要求的影片的相关信息 |  |  |
+| 触发条件 | 观众登陆成功后，进入影片查询模块，并对影片进行检索 |  |  |
+| 前置条件 | 系统正常工作，并及时更新数据 |  |  |
+| 后置条件 | 停留在当前页面，等待观众进行下一步操作 |  |  |
+| 优先级 | 700 |  |  |
+| 正常流程 | 1、观众进入影院查询系统 |  |  |
+|  | 2、观众输入关键字(影片名称)并检索或直接查询日期 |  |  |
+|  | 3、系统显示符合观众所给信息的影片，并在界面上提供预订、购买等服务 |  |  |
+|  | 4、等待观众进行下一步操作，根据观众所给的操作跳转到相应的页面 |  |  |
+|  | 5、结束 |  |  |
+| 扩展流程 | 2a、没有符合观众所给信息的影片 |  |  |
+|  | 1、系统提示顾客确认所给信息是否正确 |  |  |
+|  | 3a、观众所查询的影片门票已经售罄、结束放映或还未上架 |  |  |
+|  | 1、系统不提供预订或购买服务 |  |  |
+| 特殊需求 | 无 |  |  |
+
+
+
+<a name="9f2ac47b"></a>
+## 5.需求分析模型
+
+<a name="c4781214"></a>
+### 5.1 系统顺序图
+
+<a name="f1728bff"></a>
+#### 用例1 上架电影
+
+![](https://raw.githubusercontent.com/D-Mer/learngit/master/%E5%A4%A7%E4%BD%9C%E4%B8%9A%E5%9B%BE/%E6%B5%81%E7%A8%8B%E5%9B%BE/%E6%B5%81%E7%A8%8B%E5%9B%BE-%E4%B8%8A%E6%9E%B6%E5%BD%B1%E7%89%87.jpg#align=left&display=inline&height=818&originHeight=1021&originWidth=931&status=done&width=746)
+
+<a name="63ccc28b-1"></a>
+#### 用例2 查看影片详情
+
+![](https://raw.githubusercontent.com/D-Mer/learngit/master/%E5%A4%A7%E4%BD%9C%E4%B8%9A%E5%9B%BE/%E6%B5%81%E7%A8%8B%E5%9B%BE/%E6%B5%81%E7%A8%8B%E5%9B%BE-%E6%9F%A5%E7%9C%8B%E5%BD%B1%E7%89%87%E8%AF%A6%E6%83%85.jpg#align=left&display=inline&height=1003&originHeight=1121&originWidth=834&status=done&width=746)
+
+<a name="baf8ae99"></a>
+#### 用例3 统计预售影片想看人数
+
+![](https://raw.githubusercontent.com/D-Mer/learngit/master/%E5%A4%A7%E4%BD%9C%E4%B8%9A%E5%9B%BE/%E6%B5%81%E7%A8%8B%E5%9B%BE/%E6%B5%81%E7%A8%8B%E5%9B%BE-%E7%BB%9F%E8%AE%A1%E9%A2%84%E5%94%AE%E5%BD%B1%E7%89%87%E7%9A%84%E6%83%B3%E7%9C%8B%E4%BA%BA%E6%95%B0.jpg#align=left&display=inline&height=1003&originHeight=1121&originWidth=834&status=done&width=746)
+
+<a name="161056d8"></a>
+#### 用例4 标记影片为想看
+
+![](https://raw.githubusercontent.com/D-Mer/learngit/master/%E5%A4%A7%E4%BD%9C%E4%B8%9A%E5%9B%BE/%E6%B5%81%E7%A8%8B%E5%9B%BE/%E6%B5%81%E7%A8%8B%E5%9B%BE-%E6%A0%87%E8%AE%B0%E6%9F%90%E7%94%B5%E5%BD%B1%E4%B8%BA%E6%83%B3%E7%9C%8B.jpg#align=left&display=inline&height=1007&originHeight=1007&originWidth=686&status=done&width=686)
+
+<a name="de2ec272"></a>
+#### 用例5 搜索电影
+
+![](https://raw.githubusercontent.com/D-Mer/learngit/master/%E5%A4%A7%E4%BD%9C%E4%B8%9A%E5%9B%BE/%E6%B5%81%E7%A8%8B%E5%9B%BE/%E6%B5%81%E7%A8%8B%E5%9B%BE-%E6%90%9C%E7%B4%A2%E7%94%B5%E5%BD%B1.jpg#align=left&display=inline&height=814&originHeight=814&originWidth=544&status=done&width=544)
+
+<a name="afd4d865"></a>
+### 5.2 概念类图
+
+<a name="6d9e3250-1"></a>
+#### 用例1 上架影片
+
+![](https://raw.githubusercontent.com/D-Mer/learngit/master/%E5%A4%A7%E4%BD%9C%E4%B8%9A%E5%9B%BE/%E6%A6%82%E5%BF%B5%E7%B1%BB%E5%9B%BE/%E6%A6%82%E5%BF%B5%E7%B1%BB%E5%9B%BE-%E4%B8%8A%E6%9E%B6%E5%BD%B1%E7%89%87.jpg#align=left&display=inline&height=507&originHeight=519&originWidth=764&status=done&width=746)
+
+<a name="63ccc28b-2"></a>
+#### 用例2 查看影片详情
+
+![](https://raw.githubusercontent.com/D-Mer/learngit/master/%E5%A4%A7%E4%BD%9C%E4%B8%9A%E5%9B%BE/%E6%A6%82%E5%BF%B5%E7%B1%BB%E5%9B%BE/%E6%A6%82%E5%BF%B5%E7%B1%BB%E5%9B%BE-%E6%9F%A5%E7%9C%8B%E5%B7%B2%E4%B8%8A%E6%9E%B6%E7%94%B5%E5%BD%B1.jpg#align=left&display=inline&height=562&originHeight=562&originWidth=334&status=done&width=334)
+
+<a name="baf8ae99-1"></a>
+#### 用例3 统计预售影片想看人数
+
+![](https://raw.githubusercontent.com/D-Mer/learngit/master/%E5%A4%A7%E4%BD%9C%E4%B8%9A%E5%9B%BE/%E6%A6%82%E5%BF%B5%E7%B1%BB%E5%9B%BE/%E6%A6%82%E5%BF%B5%E7%B1%BB%E5%9B%BE-%E7%BB%9F%E8%AE%A1%E9%A2%84%E5%94%AE%E5%BD%B1%E7%89%87%E7%9A%84%E6%83%B3%E7%9C%8B%E4%BA%BA%E6%95%B0.jpg#align=left&display=inline&height=491&originHeight=493&originWidth=749&status=done&width=746)
+
+<a name="161056d8-1"></a>
+#### 用例4 标记影片为想看
+
+![](https://raw.githubusercontent.com/D-Mer/learngit/master/%E5%A4%A7%E4%BD%9C%E4%B8%9A%E5%9B%BE/%E6%A6%82%E5%BF%B5%E7%B1%BB%E5%9B%BE/%E6%A6%82%E5%BF%B5%E7%B1%BB%E5%9B%BE-%E6%A0%87%E8%AE%B0%E6%9F%90%E7%94%B5%E5%BD%B1%E4%B8%BA%E6%83%B3%E7%9C%8B.jpg#align=left&display=inline&height=504&originHeight=504&originWidth=721&status=done&width=721)
+
+<a name="de2ec272-1"></a>
+#### 用例5 搜索电影
+
+![](https://raw.githubusercontent.com/D-Mer/learngit/master/%E5%A4%A7%E4%BD%9C%E4%B8%9A%E5%9B%BE/%E6%A6%82%E5%BF%B5%E7%B1%BB%E5%9B%BE/%E6%A6%82%E5%BF%B5%E7%B1%BB%E5%9B%BE-%E6%90%9C%E7%B4%A2%E7%94%B5%E5%BD%B1(%E6%97%A5%E6%9C%9F%EF%BC%8C%E5%90%8D%E7%A7%B0%E7%AD%89).jpg#align=left&display=inline&height=488&originHeight=491&originWidth=750&status=done&width=746)
+
+<a name="8cce9c6c"></a>
+### 5.3状态图
+
+<a name="6d9e3250-2"></a>
+#### 用例1 上架影片
+
+![](https://raw.githubusercontent.com/D-Mer/learngit/master/%E5%A4%A7%E4%BD%9C%E4%B8%9A%E5%9B%BE/%E7%B3%BB%E7%BB%9F%E7%8A%B6%E6%80%81%E5%9B%BE/%E7%B3%BB%E7%BB%9F%E7%8A%B6%E6%80%81%E5%9B%BE-%E4%B8%8A%E6%9E%B6%E5%BD%B1%E7%89%87.jpg#align=left&display=inline&height=308&originHeight=530&originWidth=1282&status=done&width=746)
+
+<a name="63ccc28b-3"></a>
+#### 用例2 查看影片详情
+
+![](https://raw.githubusercontent.com/D-Mer/learngit/master/%E5%A4%A7%E4%BD%9C%E4%B8%9A%E5%9B%BE/%E7%B3%BB%E7%BB%9F%E7%8A%B6%E6%80%81%E5%9B%BE/%E7%B3%BB%E7%BB%9F%E7%8A%B6%E6%80%81%E5%9B%BE-%E6%9F%A5%E7%9C%8B%E5%BD%B1%E7%89%87%E8%AF%A6%E6%83%85.jpg#align=left&display=inline&height=351&originHeight=589&originWidth=1252&status=done&width=746)
+
+<a name="baf8ae99-2"></a>
+#### 用例3 统计预售影片想看人数
+
+![](https://raw.githubusercontent.com/D-Mer/learngit/master/%E5%A4%A7%E4%BD%9C%E4%B8%9A%E5%9B%BE/%E7%B3%BB%E7%BB%9F%E7%8A%B6%E6%80%81%E5%9B%BE/%E7%B3%BB%E7%BB%9F%E7%8A%B6%E6%80%81%E5%9B%BE-%E6%90%9C%E7%B4%A2%E7%94%B5%E5%BD%B1(%E6%97%A5%E6%9C%9F%EF%BC%8C%E5%90%8D%E7%A7%B0%E7%AD%89).jpg#align=left&display=inline&height=401&originHeight=538&originWidth=1001&status=done&width=746)
+
+<a name="161056d8-2"></a>
+#### 用例4 标记影片为想看
+
+![](https://raw.githubusercontent.com/D-Mer/learngit/master/%E5%A4%A7%E4%BD%9C%E4%B8%9A%E5%9B%BE/%E7%B3%BB%E7%BB%9F%E7%8A%B6%E6%80%81%E5%9B%BE/%E7%B3%BB%E7%BB%9F%E7%8A%B6%E6%80%81%E5%9B%BE-%E6%A0%87%E8%AE%B0%E5%BD%B1%E7%89%87%E4%B8%BA%E6%83%B3%E7%9C%8B.jpg#align=left&display=inline&height=449&originHeight=473&originWidth=786&status=done&width=746)
+
+<a name="de2ec272-2"></a>
+#### 用例5 搜索电影
+
+![](https://raw.githubusercontent.com/D-Mer/learngit/master/%E5%A4%A7%E4%BD%9C%E4%B8%9A%E5%9B%BE/%E7%B3%BB%E7%BB%9F%E7%8A%B6%E6%80%81%E5%9B%BE/%E7%B3%BB%E7%BB%9F%E7%8A%B6%E6%80%81%E5%9B%BE-%E8%B4%AD%E7%A5%A8.jpg#align=left&display=inline&height=522&originHeight=522&originWidth=521&status=done&width=521)
