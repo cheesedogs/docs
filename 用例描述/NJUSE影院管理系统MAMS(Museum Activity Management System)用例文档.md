@@ -1,15 +1,9 @@
 # NJUSE影院管理系统MAMS(Museum Activity Management System)用例文档
 
-
-<a name="a38517d1"></a>
 # V1.2 正式版
 
-
-<a name="0eb56b8a"></a>
 ## 2019/03/17
 
-
-<a name="d5dcc4ad"></a>
 ## 更新历史
 
 | 修改人员 | 日期 | 变更原因 | 版本号 |
@@ -18,8 +12,6 @@
 | 江辉 | 2019/03/19 | 统一文档格式 | V0.91 beta版 |
 | 周际宇 | 2019/03/28 | 修改文档互评中对方指出的不合适的地方 | V1.0 正式版 |
 
-
-<a name="767fa455"></a>
 ## 目录
 
 * [1.引言](#1%E5%BC%95%E8%A8%80)
@@ -54,8 +46,6 @@
     * [用例4 标记影片为想看](#%E7%94%A8%E4%BE%8B4-%E6%A0%87%E8%AE%B0%E5%BD%B1%E7%89%87%E4%B8%BA%E6%83%B3%E7%9C%8B)
     * [用例5 搜索电影](#%E7%94%A8%E4%BE%8B5-%E6%90%9C%E7%B4%A2%E7%94%B5%E5%BD%B1)
 
-
-<a name="cc1e61c5"></a>
 ## 1.引言
 
 本文档描述了影院活动管理系统的用户及管理者需求。开发小组的软件系统实现与验证工作都以此文档为依据。
@@ -64,51 +54,71 @@
 
 本文档的内容可能在项目实施过程中发生变更，但是必须由项目小组成员发出变更请求，小组讨论，最终决定，建立持续有效的版本控制。
 
-
-<a name="7ec68dad"></a>
 ### 1.1 目标
 
 本文档描述了影院活动管理系统的用户需求。
 
-
-<a name="24d53836"></a>
 ### 1.2 阅读说明
 
 无
 
-
-<a name="1b49fa7c"></a>
 ### 1.3 参考文献
 
-无
+1.IEEE std 1471-2000
+2.《影院管理系统MAMS需求最新版0418》
+3.丁二玉，刘钦.计算与软件工程（卷二）[M]机械工业出版社，2012：134~182
+4.Frank Buschmann, Regine Meunier, Hans Rohnert, Peter Sommerlad, Micheael Stal.Pattern-Oriented Software Architecture Volume 1: A system of Patterns [M]机械工业出版社,2003
 
-
-<a name="94d7c826"></a>
 ## 2.用例图
 
 ![](https://cdn.nlark.com/yuque/0/2019/png/291791/1553083674015-ed88f39f-1159-4a77-9887-4daf68fd8100.png#align=left&display=inline&height=531&originHeight=1025&originWidth=1440&size=0&status=done&width=746#align=left&display=inline&height=531&originHeight=1025&originWidth=1440&status=done&width=746)
 
-
-<a name="b1cc369f"></a>
 ## 3.用例列表
 
 | 参与者 | 用例 |
 | --- | --- |
-| 影院总经理 | 1.上架电影 |
-| 市场调研人员 | 2.统计预售电影的想看人数 |
-| 观众 | 3.查看电影详情 |
-|  | 4.某电影为“想看” |
-|  | 5.搜索电影(日期，名称等) |
+| 观众、影院员工、管理员 | 登录、注册 |
+| 观众 | 1.搜索电影               |
+|  | 2.标记电影为想看 |
+|  | 3.购买会员卡             |
+|  | 4.查看会员卡 |
+| | 充值会员卡 |
+| | 查看历史充值信息 |
+|  | 5.购买电影票 |
+| | 查看已购电影票 |
+| | 退票 |
+| | 查看历史消费记录 |
+| | 查看电影详情 |
+| 观众、影院员工 | 查看已上架电影列表 |
+| 观众、影院员工 | 查看排片信息(影厅视角) |
+| 观众、影院员工 | 查看排片信息(影片视角) |
+| 影院员工 | 修改电影信息 |
+| | 下架电影 |
+| | 添加排片信息 |
+| | 修改排片信息 |
+| | 删除排片信息 |
+| | 设置排片信息观众可见时间 |
+| | 查看受欢迎电影 |
+| | 查看所有电影累计票房 |
+| | 查看某日各影片排片率 |
+| | 查看所有电影某日上座率 |
+| | 查看每日客单价 |
+| | 发布优惠活动 |
+| 管理员 | 上架电影 |
+| | 影厅信息录入 |
+| | 修改影厅信息 |
+| | 发布会员卡优惠策略 |
+| | 修改会员卡优惠策略 |
+| | 赠送优惠券 |
+| | 设置退票策略 |
+| | 修改退票策略 |
+| | 统计预售电影想看人数 |
+| | 影院角色增删改查 |
 
 
 
-<a name="5fbc9430"></a>
 ## 4.详细用例描述
 
-
-
-
-<a name="6d9e3250"></a>
 ### 用例1 上架影片
 
 | ID | 0001 | 名称 | 上架电影 |
@@ -143,7 +153,6 @@
 
 
 
-<a name="63ccc28b"></a>
 ### 用例2 查看影片详情
 
 | ID | 0002 | 名称 | 查看影片详情 |
@@ -167,7 +176,6 @@
 
 
 
-<a name="11f399ee"></a>
 ### 用例3 统计预售影片的想看人数
 
 | ID | 0003 | 名称 | 统计预售影片想看人数 |
@@ -194,7 +202,6 @@
 
 
 
-<a name="d08e9002"></a>
 ### 用例4 标记某电影为想看
 
 | ID | 0004 | 名称 | 标记影片为想看 |
@@ -227,7 +234,6 @@
 
 
 
-<a name="183737d8"></a>
 ### 用例5 搜索电影(日期，名称等)
 
 | ID | 0005 | 名称 | 搜索影片 |
@@ -252,89 +258,88 @@
 
 
 
-<a name="9f2ac47b"></a>
 ## 5.需求分析模型
 
-<a name="c4781214"></a>
+
 ### 5.1 系统顺序图
 
-<a name="f1728bff"></a>
+
 #### 用例1 上架电影
 
 ![](https://raw.githubusercontent.com/D-Mer/learngit/master/%E5%A4%A7%E4%BD%9C%E4%B8%9A%E5%9B%BE/%E6%B5%81%E7%A8%8B%E5%9B%BE/%E6%B5%81%E7%A8%8B%E5%9B%BE-%E4%B8%8A%E6%9E%B6%E5%BD%B1%E7%89%87.jpg#align=left&display=inline&height=818&originHeight=1021&originWidth=931&status=done&width=746)
 
-<a name="63ccc28b-1"></a>
+
 #### 用例2 查看影片详情
 
 ![](https://raw.githubusercontent.com/D-Mer/learngit/master/%E5%A4%A7%E4%BD%9C%E4%B8%9A%E5%9B%BE/%E6%B5%81%E7%A8%8B%E5%9B%BE/%E6%B5%81%E7%A8%8B%E5%9B%BE-%E6%9F%A5%E7%9C%8B%E5%BD%B1%E7%89%87%E8%AF%A6%E6%83%85.jpg#align=left&display=inline&height=1003&originHeight=1121&originWidth=834&status=done&width=746)
 
-<a name="baf8ae99"></a>
+
 #### 用例3 统计预售影片想看人数
 
 ![](https://raw.githubusercontent.com/D-Mer/learngit/master/%E5%A4%A7%E4%BD%9C%E4%B8%9A%E5%9B%BE/%E6%B5%81%E7%A8%8B%E5%9B%BE/%E6%B5%81%E7%A8%8B%E5%9B%BE-%E7%BB%9F%E8%AE%A1%E9%A2%84%E5%94%AE%E5%BD%B1%E7%89%87%E7%9A%84%E6%83%B3%E7%9C%8B%E4%BA%BA%E6%95%B0.jpg#align=left&display=inline&height=1003&originHeight=1121&originWidth=834&status=done&width=746)
 
-<a name="161056d8"></a>
+
 #### 用例4 标记影片为想看
 
 ![](https://raw.githubusercontent.com/D-Mer/learngit/master/%E5%A4%A7%E4%BD%9C%E4%B8%9A%E5%9B%BE/%E6%B5%81%E7%A8%8B%E5%9B%BE/%E6%B5%81%E7%A8%8B%E5%9B%BE-%E6%A0%87%E8%AE%B0%E6%9F%90%E7%94%B5%E5%BD%B1%E4%B8%BA%E6%83%B3%E7%9C%8B.jpg#align=left&display=inline&height=1007&originHeight=1007&originWidth=686&status=done&width=686)
 
-<a name="de2ec272"></a>
+
 #### 用例5 搜索电影
 
 ![](https://raw.githubusercontent.com/D-Mer/learngit/master/%E5%A4%A7%E4%BD%9C%E4%B8%9A%E5%9B%BE/%E6%B5%81%E7%A8%8B%E5%9B%BE/%E6%B5%81%E7%A8%8B%E5%9B%BE-%E6%90%9C%E7%B4%A2%E7%94%B5%E5%BD%B1.jpg#align=left&display=inline&height=814&originHeight=814&originWidth=544&status=done&width=544)
 
-<a name="afd4d865"></a>
+
 ### 5.2 概念类图
 
-<a name="6d9e3250-1"></a>
+
 #### 用例1 上架影片
 
 ![](https://raw.githubusercontent.com/D-Mer/learngit/master/%E5%A4%A7%E4%BD%9C%E4%B8%9A%E5%9B%BE/%E6%A6%82%E5%BF%B5%E7%B1%BB%E5%9B%BE/%E6%A6%82%E5%BF%B5%E7%B1%BB%E5%9B%BE-%E4%B8%8A%E6%9E%B6%E5%BD%B1%E7%89%87.jpg#align=left&display=inline&height=507&originHeight=519&originWidth=764&status=done&width=746)
 
-<a name="63ccc28b-2"></a>
+
 #### 用例2 查看影片详情
 
 ![](https://raw.githubusercontent.com/D-Mer/learngit/master/%E5%A4%A7%E4%BD%9C%E4%B8%9A%E5%9B%BE/%E6%A6%82%E5%BF%B5%E7%B1%BB%E5%9B%BE/%E6%A6%82%E5%BF%B5%E7%B1%BB%E5%9B%BE-%E6%9F%A5%E7%9C%8B%E5%B7%B2%E4%B8%8A%E6%9E%B6%E7%94%B5%E5%BD%B1.jpg#align=left&display=inline&height=562&originHeight=562&originWidth=334&status=done&width=334)
 
-<a name="baf8ae99-1"></a>
+
 #### 用例3 统计预售影片想看人数
 
 ![](https://raw.githubusercontent.com/D-Mer/learngit/master/%E5%A4%A7%E4%BD%9C%E4%B8%9A%E5%9B%BE/%E6%A6%82%E5%BF%B5%E7%B1%BB%E5%9B%BE/%E6%A6%82%E5%BF%B5%E7%B1%BB%E5%9B%BE-%E7%BB%9F%E8%AE%A1%E9%A2%84%E5%94%AE%E5%BD%B1%E7%89%87%E7%9A%84%E6%83%B3%E7%9C%8B%E4%BA%BA%E6%95%B0.jpg#align=left&display=inline&height=491&originHeight=493&originWidth=749&status=done&width=746)
 
-<a name="161056d8-1"></a>
+
 #### 用例4 标记影片为想看
 
 ![](https://raw.githubusercontent.com/D-Mer/learngit/master/%E5%A4%A7%E4%BD%9C%E4%B8%9A%E5%9B%BE/%E6%A6%82%E5%BF%B5%E7%B1%BB%E5%9B%BE/%E6%A6%82%E5%BF%B5%E7%B1%BB%E5%9B%BE-%E6%A0%87%E8%AE%B0%E6%9F%90%E7%94%B5%E5%BD%B1%E4%B8%BA%E6%83%B3%E7%9C%8B.jpg#align=left&display=inline&height=504&originHeight=504&originWidth=721&status=done&width=721)
 
-<a name="de2ec272-1"></a>
+
 #### 用例5 搜索电影
 
 ![](https://raw.githubusercontent.com/D-Mer/learngit/master/%E5%A4%A7%E4%BD%9C%E4%B8%9A%E5%9B%BE/%E6%A6%82%E5%BF%B5%E7%B1%BB%E5%9B%BE/%E6%A6%82%E5%BF%B5%E7%B1%BB%E5%9B%BE-%E6%90%9C%E7%B4%A2%E7%94%B5%E5%BD%B1(%E6%97%A5%E6%9C%9F%EF%BC%8C%E5%90%8D%E7%A7%B0%E7%AD%89).jpg#align=left&display=inline&height=488&originHeight=491&originWidth=750&status=done&width=746)
 
-<a name="8cce9c6c"></a>
+
 ### 5.3状态图
 
-<a name="6d9e3250-2"></a>
+
 #### 用例1 上架影片
 
 ![](https://raw.githubusercontent.com/D-Mer/learngit/master/%E5%A4%A7%E4%BD%9C%E4%B8%9A%E5%9B%BE/%E7%B3%BB%E7%BB%9F%E7%8A%B6%E6%80%81%E5%9B%BE/%E7%B3%BB%E7%BB%9F%E7%8A%B6%E6%80%81%E5%9B%BE-%E4%B8%8A%E6%9E%B6%E5%BD%B1%E7%89%87.jpg#align=left&display=inline&height=308&originHeight=530&originWidth=1282&status=done&width=746)
 
-<a name="63ccc28b-3"></a>
+
 #### 用例2 查看影片详情
 
 ![](https://raw.githubusercontent.com/D-Mer/learngit/master/%E5%A4%A7%E4%BD%9C%E4%B8%9A%E5%9B%BE/%E7%B3%BB%E7%BB%9F%E7%8A%B6%E6%80%81%E5%9B%BE/%E7%B3%BB%E7%BB%9F%E7%8A%B6%E6%80%81%E5%9B%BE-%E6%9F%A5%E7%9C%8B%E5%BD%B1%E7%89%87%E8%AF%A6%E6%83%85.jpg#align=left&display=inline&height=351&originHeight=589&originWidth=1252&status=done&width=746)
 
-<a name="baf8ae99-2"></a>
+
 #### 用例3 统计预售影片想看人数
 
 ![](https://raw.githubusercontent.com/D-Mer/learngit/master/%E5%A4%A7%E4%BD%9C%E4%B8%9A%E5%9B%BE/%E7%B3%BB%E7%BB%9F%E7%8A%B6%E6%80%81%E5%9B%BE/%E7%B3%BB%E7%BB%9F%E7%8A%B6%E6%80%81%E5%9B%BE-%E6%90%9C%E7%B4%A2%E7%94%B5%E5%BD%B1(%E6%97%A5%E6%9C%9F%EF%BC%8C%E5%90%8D%E7%A7%B0%E7%AD%89).jpg#align=left&display=inline&height=401&originHeight=538&originWidth=1001&status=done&width=746)
 
-<a name="161056d8-2"></a>
+
 #### 用例4 标记影片为想看
 
 ![](https://raw.githubusercontent.com/D-Mer/learngit/master/%E5%A4%A7%E4%BD%9C%E4%B8%9A%E5%9B%BE/%E7%B3%BB%E7%BB%9F%E7%8A%B6%E6%80%81%E5%9B%BE/%E7%B3%BB%E7%BB%9F%E7%8A%B6%E6%80%81%E5%9B%BE-%E6%A0%87%E8%AE%B0%E5%BD%B1%E7%89%87%E4%B8%BA%E6%83%B3%E7%9C%8B.jpg#align=left&display=inline&height=449&originHeight=473&originWidth=786&status=done&width=746)
 
-<a name="de2ec272-2"></a>
+
 #### 用例5 搜索电影
 
 ![](https://raw.githubusercontent.com/D-Mer/learngit/master/%E5%A4%A7%E4%BD%9C%E4%B8%9A%E5%9B%BE/%E7%B3%BB%E7%BB%9F%E7%8A%B6%E6%80%81%E5%9B%BE/%E7%B3%BB%E7%BB%9F%E7%8A%B6%E6%80%81%E5%9B%BE-%E8%B4%AD%E7%A5%A8.jpg#align=left&display=inline&height=522&originHeight=522&originWidth=521&status=done&width=521)
