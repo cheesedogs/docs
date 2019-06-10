@@ -346,7 +346,7 @@
 | 前置条件 | 1、目标影片在系统中存在                                      |                |                        |
 | 后置条件 | 无                                                           |                |                        |
 | 优先级   | 1000                                                         |                |                        |
-| 正常流程 | 1、用户请求从影厅视角查看排片信息                            |                |                        |
+| 正常流程 | 1、用户请求从影片视角查看排片信息                            |                |                        |
 |          | 2、系统显示所有有排片的电影并提示用户选择需要查看的电影      |                |                        |
 |          | 3、用户选择想要查看的电影                                    |                |                        |
 |          | 4、系统展示该电影在各影厅的排片信息表                        |                |                        |
@@ -734,7 +734,7 @@
 
 #### 用例1 上架电影
 
-![](https://raw.githubusercontent.com/D-Mer/learngit/master/%E5%A4%A7%E4%BD%9C%E4%B8%9A%E5%9B%BE/%E6%B5%81%E7%A8%8B%E5%9B%BE/%E6%B5%81%E7%A8%8B%E5%9B%BE-%E4%B8%8A%E6%9E%B6%E5%BD%B1%E7%89%87.jpg#align=left&display=inline&height=818&originHeight=1021&originWidth=931&status=done&width=746)
+![]([https://raw.githubusercontent.com/cheesedogs/photos/LiuTaoIsMyProud/%E5%A4%A7%E4%BD%9C%E4%B8%9A%E5%9B%BE/%E9%9C%80%E6%B1%82%E6%96%87%E6%A1%A3%E5%9B%BE/%E7%B3%BB%E7%BB%9F%E9%A1%BA%E5%BA%8F%E5%9B%BE/1.5.1.1%20%E6%90%9C%E7%B4%A2%E7%94%B5%E5%BD%B1.jpg](https://raw.githubusercontent.com/cheesedogs/photos/LiuTaoIsMyProud/大作业图/需求文档图/系统顺序图/1.5.1.1 搜索电影.jpg))
 
 
 #### 用例2 查看影片详情
