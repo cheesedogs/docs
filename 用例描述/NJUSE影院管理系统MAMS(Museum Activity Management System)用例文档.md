@@ -987,7 +987,7 @@
 
 #### 用例14 管理排片信息（增、删、改）
 
-!
+![https://raw.githubusercontent.com/cheesedogs/photos/LiuTaoIsMyProud/%E5%A4%A7%E4%BD%9C%E4%B8%9A%E5%9B%BE/%E9%9C%80%E6%B1%82%E6%96%87%E6%A1%A3%E5%9B%BE/%E7%B3%BB%E7%BB%9F%E7%8A%B6%E6%80%81%E5%9B%BE/1.5.3.14%20%E7%AE%A1%E7%90%86%E6%8E%92%E7%89%87%E4%BF%A1%E6%81%AF(%E5%A2%9E%E3%80%81%E5%88%A0%E3%80%81%E6%94%B9).jpg](https://raw.githubusercontent.com/cheesedogs/photos/LiuTaoIsMyProud/大作业图/需求文档图/系统状态图/1.5.3.14 管理排片信息(增、删、改).jpg)
 
 #### 用例15 管理排片信息观众可见时间（设置、修改）
 
