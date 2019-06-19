@@ -13,6 +13,7 @@
 | 周际宇 | 2019/03/28 | 修改文档互评中对方指出的不合适的地方 | V1.0 正式版 |
 | 刘涛 | 2019/05/12 | 增加第二、三阶段的管理员用例 | v1.11 内测版 |
 | 江辉 | 2019/05/13 | 统一用例描述 | v1.12 内测版 |
+| 周际宇 | 2019/6/10 | 增加顺序图、状态图和概念类图 | v2.11内测版 |
 
 ## 目录
 
@@ -326,7 +327,7 @@
 | 前置条件 | 1、目标影片在系统中存在                                      |                |                        |
 | 后置条件 | 无                                                           |                |                        |
 | 优先级   | 1000                                                         |                |                        |
-| 正常流程 | 1、用户请求从影厅视角查看排片信息                            |                |                        |
+| 正常流程 | 1、用户请求从影片视角查看排片信息                            |                |                        |
 |          | 2、系统显示所有有排片的电影并提示用户选择需要查看的电影      |                |                        |
 |          | 3、用户选择想要查看的电影                                    |                |                        |
 |          | 4、系统展示该电影在各影厅的排片信息表                        |                |                        |
@@ -783,97 +784,291 @@
 ### 5.1 系统顺序图
 
 
+#### 用例1 搜索电影
 
-| 参与者 | 用例 |
-| --- | --- |
-| 观众 | 1.搜索电影             |
-|  | 2.标记电影为想看 |
-|  | 3.管理会员卡(查看、充值、购买)       |
-| | 4.查看历史消费信息 |
-|  | 5.购买电影票 |
-| | 6.查看已购电影票 |
-| | 7.退票 |
-| 观众、影院员工 | 8.查看电影详情 |
-| 观众、影院员工 | 9.查看已上架电影列表 |
-| 观众、影院员工 | 10.查看排片信息(影厅视角) |
-| 观众、影院员工 | 11.查看排片信息(影片视角) |
-
-#### 用例1 上架电影
-
-![](https://raw.githubusercontent.com/D-Mer/learngit/master/%E5%A4%A7%E4%BD%9C%E4%B8%9A%E5%9B%BE/%E6%B5%81%E7%A8%8B%E5%9B%BE/%E6%B5%81%E7%A8%8B%E5%9B%BE-%E4%B8%8A%E6%9E%B6%E5%BD%B1%E7%89%87.jpg#align=left&display=inline&height=818&originHeight=1021&originWidth=931&status=done&width=746)
+![](https://raw.githubusercontent.com/cheesedogs/photos/LiuTaoIsMyProud/大作业图/需求文档图/系统顺序图/1.5.1.1 搜索电影.jpg))
 
 
 #### 用例2 查看影片详情
 
-![](https://raw.githubusercontent.com/D-Mer/learngit/master/%E5%A4%A7%E4%BD%9C%E4%B8%9A%E5%9B%BE/%E6%B5%81%E7%A8%8B%E5%9B%BE/%E6%B5%81%E7%A8%8B%E5%9B%BE-%E6%9F%A5%E7%9C%8B%E5%BD%B1%E7%89%87%E8%AF%A6%E6%83%85.jpg#align=left&display=inline&height=1003&originHeight=1121&originWidth=834&status=done&width=746)
+![](https://raw.githubusercontent.com/cheesedogs/photos/LiuTaoIsMyProud/大作业图/需求文档图/系统顺序图/1.5.1.2 标记电影为想看.jpg)
 
 
-#### 用例3 统计预售影片想看人数
+#### 用例3 管理会员卡
 
-![](https://raw.githubusercontent.com/D-Mer/learngit/master/%E5%A4%A7%E4%BD%9C%E4%B8%9A%E5%9B%BE/%E6%B5%81%E7%A8%8B%E5%9B%BE/%E6%B5%81%E7%A8%8B%E5%9B%BE-%E7%BB%9F%E8%AE%A1%E9%A2%84%E5%94%AE%E5%BD%B1%E7%89%87%E7%9A%84%E6%83%B3%E7%9C%8B%E4%BA%BA%E6%95%B0.jpg#align=left&display=inline&height=1003&originHeight=1121&originWidth=834&status=done&width=746)
-
-
-#### 用例4 标记影片为想看
-
-![](https://raw.githubusercontent.com/D-Mer/learngit/master/%E5%A4%A7%E4%BD%9C%E4%B8%9A%E5%9B%BE/%E6%B5%81%E7%A8%8B%E5%9B%BE/%E6%B5%81%E7%A8%8B%E5%9B%BE-%E6%A0%87%E8%AE%B0%E6%9F%90%E7%94%B5%E5%BD%B1%E4%B8%BA%E6%83%B3%E7%9C%8B.jpg#align=left&display=inline&height=1007&originHeight=1007&originWidth=686&status=done&width=686)
+![](https://raw.githubusercontent.com/cheesedogs/photos/LiuTaoIsMyProud/%E5%A4%A7%E4%BD%9C%E4%B8%9A%E5%9B%BE/%E9%9C%80%E6%B1%82%E6%96%87%E6%A1%A3%E5%9B%BE/%E7%B3%BB%E7%BB%9F%E9%A1%BA%E5%BA%8F%E5%9B%BE/1.5.1.3%20%E7%AE%A1%E7%90%86%E4%BC%9A%E5%91%98%E5%8D%A1.jpg)
 
 
-#### 用例5 搜索电影
+#### 用例4 查看历史消费记录
 
-![](https://raw.githubusercontent.com/D-Mer/learngit/master/%E5%A4%A7%E4%BD%9C%E4%B8%9A%E5%9B%BE/%E6%B5%81%E7%A8%8B%E5%9B%BE/%E6%B5%81%E7%A8%8B%E5%9B%BE-%E6%90%9C%E7%B4%A2%E7%94%B5%E5%BD%B1.jpg#align=left&display=inline&height=814&originHeight=814&originWidth=544&status=done&width=544)
+![https://raw.githubusercontent.com/cheesedogs/photos/LiuTaoIsMyProud/%E5%A4%A7%E4%BD%9C%E4%B8%9A%E5%9B%BE/%E9%9C%80%E6%B1%82%E6%96%87%E6%A1%A3%E5%9B%BE/%E7%B3%BB%E7%BB%9F%E9%A1%BA%E5%BA%8F%E5%9B%BE/1.5.1.4%20%E6%9F%A5%E7%9C%8B%E5%8E%86%E5%8F%B2%E6%B6%88%E8%B4%B9%E8%AE%B0%E5%BD%95.jpg](https://raw.githubusercontent.com/cheesedogs/photos/LiuTaoIsMyProud/大作业图/需求文档图/系统顺序图/1.5.1.4 查看历史消费记录.jpg)
+
+
+#### 用例5 购买电影票
+
+![https://raw.githubusercontent.com/cheesedogs/photos/LiuTaoIsMyProud/%E5%A4%A7%E4%BD%9C%E4%B8%9A%E5%9B%BE/%E9%9C%80%E6%B1%82%E6%96%87%E6%A1%A3%E5%9B%BE/%E7%B3%BB%E7%BB%9F%E9%A1%BA%E5%BA%8F%E5%9B%BE/1.5.1.5%20%E8%B4%AD%E4%B9%B0%E7%94%B5%E5%BD%B1%E7%A5%A8.jpg](https://raw.githubusercontent.com/cheesedogs/photos/LiuTaoIsMyProud/大作业图/需求文档图/系统顺序图/1.5.1.5 购买电影票.jpg)
+
+#### 用例6  查看已购电影票
+
+![https://raw.githubusercontent.com/cheesedogs/photos/LiuTaoIsMyProud/%E5%A4%A7%E4%BD%9C%E4%B8%9A%E5%9B%BE/%E9%9C%80%E6%B1%82%E6%96%87%E6%A1%A3%E5%9B%BE/%E7%B3%BB%E7%BB%9F%E9%A1%BA%E5%BA%8F%E5%9B%BE/1.5.1.6%20%E6%9F%A5%E7%9C%8B%E5%B7%B2%E8%B4%AD%E7%94%B5%E5%BD%B1%E7%A5%A8.jpg](https://raw.githubusercontent.com/cheesedogs/photos/LiuTaoIsMyProud/大作业图/需求文档图/系统顺序图/1.5.1.6 查看已购电影票.jpg)
+
+
+
+#### 用例7 退票
+
+![https://raw.githubusercontent.com/cheesedogs/photos/LiuTaoIsMyProud/%E5%A4%A7%E4%BD%9C%E4%B8%9A%E5%9B%BE/%E9%9C%80%E6%B1%82%E6%96%87%E6%A1%A3%E5%9B%BE/%E7%B3%BB%E7%BB%9F%E9%A1%BA%E5%BA%8F%E5%9B%BE/1.5.1.7%20%E9%80%80%E7%A5%A8.jpg](https://raw.githubusercontent.com/cheesedogs/photos/LiuTaoIsMyProud/大作业图/需求文档图/系统顺序图/1.5.1.7 退票.jpg)
+
+#### 用例8 查看电影详情
+
+![https://raw.githubusercontent.com/cheesedogs/photos/LiuTaoIsMyProud/%E5%A4%A7%E4%BD%9C%E4%B8%9A%E5%9B%BE/%E9%9C%80%E6%B1%82%E6%96%87%E6%A1%A3%E5%9B%BE/%E7%B3%BB%E7%BB%9F%E9%A1%BA%E5%BA%8F%E5%9B%BE/1.5.1.8%20%E6%9F%A5%E7%9C%8B%E7%94%B5%E5%BD%B1%E8%AF%A6%E6%83%85.jpg](https://raw.githubusercontent.com/cheesedogs/photos/LiuTaoIsMyProud/大作业图/需求文档图/系统顺序图/1.5.1.8 查看电影详情.jpg)
+
+
+
+#### 用例9 查看上架电影
+
+![https://raw.githubusercontent.com/cheesedogs/photos/LiuTaoIsMyProud/%E5%A4%A7%E4%BD%9C%E4%B8%9A%E5%9B%BE/%E9%9C%80%E6%B1%82%E6%96%87%E6%A1%A3%E5%9B%BE/%E7%B3%BB%E7%BB%9F%E9%A1%BA%E5%BA%8F%E5%9B%BE/1.5.1.9%20%E6%9F%A5%E7%9C%8B%E4%B8%8A%E6%9E%B6%E7%94%B5%E5%BD%B1.jpg](https://raw.githubusercontent.com/cheesedogs/photos/LiuTaoIsMyProud/大作业图/需求文档图/系统顺序图/1.5.1.9 查看上架电影.jpg)
+
+#### 用例10 查看排片信息（影厅）
+
+![https://raw.githubusercontent.com/cheesedogs/photos/LiuTaoIsMyProud/%E5%A4%A7%E4%BD%9C%E4%B8%9A%E5%9B%BE/%E9%9C%80%E6%B1%82%E6%96%87%E6%A1%A3%E5%9B%BE/%E7%B3%BB%E7%BB%9F%E9%A1%BA%E5%BA%8F%E5%9B%BE/1.5.1.10%20%E6%9F%A5%E7%9C%8B%E6%8B%8D%E7%89%87%E4%BF%A1%E6%81%AF(%E5%BD%B1%E5%8E%85).jpg](https://raw.githubusercontent.com/cheesedogs/photos/LiuTaoIsMyProud/大作业图/需求文档图/系统顺序图/1.5.1.10 查看拍片信息(影厅).jpg)
+
+#### 用例11 查看排片信息（影片）
+
+![https://raw.githubusercontent.com/cheesedogs/photos/LiuTaoIsMyProud/%E5%A4%A7%E4%BD%9C%E4%B8%9A%E5%9B%BE/%E9%9C%80%E6%B1%82%E6%96%87%E6%A1%A3%E5%9B%BE/%E7%B3%BB%E7%BB%9F%E9%A1%BA%E5%BA%8F%E5%9B%BE/1.5.1.11%20%E6%9F%A5%E7%9C%8B%E6%8B%8D%E7%89%87%E4%BF%A1%E6%81%AF(%E5%BD%B1%E7%89%87).jpg](https://raw.githubusercontent.com/cheesedogs/photos/LiuTaoIsMyProud/大作业图/需求文档图/系统顺序图/1.5.1.11 查看拍片信息(影片).jpg)
+
+#### 用例12 修改电影信息
+
+![https://raw.githubusercontent.com/cheesedogs/photos/LiuTaoIsMyProud/%E5%A4%A7%E4%BD%9C%E4%B8%9A%E5%9B%BE/%E9%9C%80%E6%B1%82%E6%96%87%E6%A1%A3%E5%9B%BE/%E7%B3%BB%E7%BB%9F%E9%A1%BA%E5%BA%8F%E5%9B%BE/1.5.1.12%20%E4%BF%AE%E6%94%B9%E7%94%B5%E5%BD%B1%E4%BF%A1%E6%81%AF.jpg](https://raw.githubusercontent.com/cheesedogs/photos/LiuTaoIsMyProud/大作业图/需求文档图/系统顺序图/1.5.1.12 修改电影信息.jpg)
+
+#### 用例13 上、下架电影
+
+![https://raw.githubusercontent.com/cheesedogs/photos/LiuTaoIsMyProud/%E5%A4%A7%E4%BD%9C%E4%B8%9A%E5%9B%BE/%E9%9C%80%E6%B1%82%E6%96%87%E6%A1%A3%E5%9B%BE/%E7%B3%BB%E7%BB%9F%E9%A1%BA%E5%BA%8F%E5%9B%BE/1.5.1.13%20%E4%B8%8A%E3%80%81%E4%B8%8B%E6%9E%B6%E7%94%B5%E5%BD%B1.jpg](https://raw.githubusercontent.com/cheesedogs/photos/LiuTaoIsMyProud/大作业图/需求文档图/系统顺序图/1.5.1.13 上、下架电影.jpg)
+
+#### 用例14 管理排片信息（增、删、改）
+
+![https://raw.githubusercontent.com/cheesedogs/photos/LiuTaoIsMyProud/%E5%A4%A7%E4%BD%9C%E4%B8%9A%E5%9B%BE/%E9%9C%80%E6%B1%82%E6%96%87%E6%A1%A3%E5%9B%BE/%E7%B3%BB%E7%BB%9F%E9%A1%BA%E5%BA%8F%E5%9B%BE/1.5.1.14%20%E7%AE%A1%E7%90%86%E6%8E%92%E7%89%87%E4%BF%A1%E6%81%AF(%E5%A2%9E%E3%80%81%E5%88%A0%E3%80%81%E6%94%B9).jpg](https://raw.githubusercontent.com/cheesedogs/photos/LiuTaoIsMyProud/大作业图/需求文档图/系统顺序图/1.5.1.14 管理排片信息(增、删、改).jpg)
+
+#### 用例15 修改排片信息观众可见时间（设置、修改）
+
+![https://raw.githubusercontent.com/cheesedogs/photos/LiuTaoIsMyProud/%E5%A4%A7%E4%BD%9C%E4%B8%9A%E5%9B%BE/%E9%9C%80%E6%B1%82%E6%96%87%E6%A1%A3%E5%9B%BE/%E7%B3%BB%E7%BB%9F%E9%A1%BA%E5%BA%8F%E5%9B%BE/1.5.1.15%20%E4%BF%AE%E6%94%B9%E6%8E%92%E7%89%87%E4%BF%A1%E6%81%AF%E8%A7%82%E4%BC%97%E5%8F%AF%E8%A7%81%E6%97%B6%E9%97%B4(%E8%AE%BE%E7%BD%AE%E3%80%81%E4%BF%AE%E6%94%B9).jpg](https://raw.githubusercontent.com/cheesedogs/photos/LiuTaoIsMyProud/大作业图/需求文档图/系统顺序图/1.5.1.15 修改排片信息观众可见时间(设置、修改).jpg)
+
+#### 用例16 查看统计数据
+
+![https://raw.githubusercontent.com/cheesedogs/photos/LiuTaoIsMyProud/%E5%A4%A7%E4%BD%9C%E4%B8%9A%E5%9B%BE/%E9%9C%80%E6%B1%82%E6%96%87%E6%A1%A3%E5%9B%BE/%E7%B3%BB%E7%BB%9F%E9%A1%BA%E5%BA%8F%E5%9B%BE/1.5.1.16%20%E6%9F%A5%E7%9C%8B%E7%BB%9F%E8%AE%A1%E6%95%B0%E6%8D%AE.jpg](https://raw.githubusercontent.com/cheesedogs/photos/LiuTaoIsMyProud/大作业图/需求文档图/系统顺序图/1.5.1.16 查看统计数据.jpg)
+
+#### 用例17 发布优惠活动
+
+![https://raw.githubusercontent.com/cheesedogs/photos/LiuTaoIsMyProud/%E5%A4%A7%E4%BD%9C%E4%B8%9A%E5%9B%BE/%E9%9C%80%E6%B1%82%E6%96%87%E6%A1%A3%E5%9B%BE/%E7%B3%BB%E7%BB%9F%E9%A1%BA%E5%BA%8F%E5%9B%BE/1.5.1.17%20%E5%8F%91%E5%B8%83%E4%BC%98%E6%83%A0%E6%B4%BB%E5%8A%A8.jpg](https://raw.githubusercontent.com/cheesedogs/photos/LiuTaoIsMyProud/大作业图/需求文档图/系统顺序图/1.5.1.17 发布优惠活动.jpg)
+
+#### 用例18 影厅信息管理
+
+![https://raw.githubusercontent.com/cheesedogs/photos/LiuTaoIsMyProud/%E5%A4%A7%E4%BD%9C%E4%B8%9A%E5%9B%BE/%E9%9C%80%E6%B1%82%E6%96%87%E6%A1%A3%E5%9B%BE/%E7%B3%BB%E7%BB%9F%E9%A1%BA%E5%BA%8F%E5%9B%BE/1.5.1.18%20%E5%BD%B1%E5%8E%85%E4%BF%A1%E6%81%AF%E7%AE%A1%E7%90%86.jpg](https://raw.githubusercontent.com/cheesedogs/photos/LiuTaoIsMyProud/大作业图/需求文档图/系统顺序图/1.5.1.18 影厅信息管理.jpg)
+
+#### 用例19 管理会员卡优惠策略
+
+![https://raw.githubusercontent.com/cheesedogs/photos/LiuTaoIsMyProud/%E5%A4%A7%E4%BD%9C%E4%B8%9A%E5%9B%BE/%E9%9C%80%E6%B1%82%E6%96%87%E6%A1%A3%E5%9B%BE/%E7%B3%BB%E7%BB%9F%E9%A1%BA%E5%BA%8F%E5%9B%BE/1.5.1.19%20%E7%AE%A1%E7%90%86%E4%BC%9A%E5%91%98%E5%8D%A1%E4%BC%98%E6%83%A0%E7%AD%96%E7%95%A5.jpg](https://raw.githubusercontent.com/cheesedogs/photos/LiuTaoIsMyProud/大作业图/需求文档图/系统顺序图/1.5.1.19 管理会员卡优惠策略.jpg)
+
+#### 用例20 赠送优惠券
+
+![https://raw.githubusercontent.com/cheesedogs/photos/LiuTaoIsMyProud/%E5%A4%A7%E4%BD%9C%E4%B8%9A%E5%9B%BE/%E9%9C%80%E6%B1%82%E6%96%87%E6%A1%A3%E5%9B%BE/%E7%B3%BB%E7%BB%9F%E9%A1%BA%E5%BA%8F%E5%9B%BE/1.5.1.20%20%E8%B5%A0%E9%80%81%E4%BC%98%E6%83%A0%E5%88%B8.jpg](https://raw.githubusercontent.com/cheesedogs/photos/LiuTaoIsMyProud/大作业图/需求文档图/系统顺序图/1.5.1.20 赠送优惠券.jpg)
+
+#### 用例21 管理退票策略
+
+![https://raw.githubusercontent.com/cheesedogs/photos/LiuTaoIsMyProud/%E5%A4%A7%E4%BD%9C%E4%B8%9A%E5%9B%BE/%E9%9C%80%E6%B1%82%E6%96%87%E6%A1%A3%E5%9B%BE/%E7%B3%BB%E7%BB%9F%E9%A1%BA%E5%BA%8F%E5%9B%BE/1.5.1.21%20%E7%AE%A1%E7%90%86%E9%80%80%E7%A5%A8%E7%AD%96%E7%95%A5.jpg](https://raw.githubusercontent.com/cheesedogs/photos/LiuTaoIsMyProud/大作业图/需求文档图/系统顺序图/1.5.1.21 管理退票策略.jpg)
+
+#### 用例22 管理影院角色
+
+![https://raw.githubusercontent.com/cheesedogs/photos/LiuTaoIsMyProud/%E5%A4%A7%E4%BD%9C%E4%B8%9A%E5%9B%BE/%E9%9C%80%E6%B1%82%E6%96%87%E6%A1%A3%E5%9B%BE/%E7%B3%BB%E7%BB%9F%E9%A1%BA%E5%BA%8F%E5%9B%BE/1.5.1.22%20%E7%AE%A1%E7%90%86%E5%BD%B1%E9%99%A2%E8%A7%92%E8%89%B2.jpg](https://raw.githubusercontent.com/cheesedogs/photos/LiuTaoIsMyProud/大作业图/需求文档图/系统顺序图/1.5.1.22 管理影院角色.jpg)
+
+
+
+
+
 
 
 ### 5.2 概念类图
 
 
-#### 用例1 上架影片
+#### 用例1 搜索电影
 
-![](https://raw.githubusercontent.com/D-Mer/learngit/master/%E5%A4%A7%E4%BD%9C%E4%B8%9A%E5%9B%BE/%E6%A6%82%E5%BF%B5%E7%B1%BB%E5%9B%BE/%E6%A6%82%E5%BF%B5%E7%B1%BB%E5%9B%BE-%E4%B8%8A%E6%9E%B6%E5%BD%B1%E7%89%87.jpg#align=left&display=inline&height=507&originHeight=519&originWidth=764&status=done&width=746)
-
-
-#### 用例2 查看影片详情
-
-![](https://raw.githubusercontent.com/D-Mer/learngit/master/%E5%A4%A7%E4%BD%9C%E4%B8%9A%E5%9B%BE/%E6%A6%82%E5%BF%B5%E7%B1%BB%E5%9B%BE/%E6%A6%82%E5%BF%B5%E7%B1%BB%E5%9B%BE-%E6%9F%A5%E7%9C%8B%E5%B7%B2%E4%B8%8A%E6%9E%B6%E7%94%B5%E5%BD%B1.jpg#align=left&display=inline&height=562&originHeight=562&originWidth=334&status=done&width=334)
+![https://raw.githubusercontent.com/cheesedogs/photos/LiuTaoIsMyProud/%E5%A4%A7%E4%BD%9C%E4%B8%9A%E5%9B%BE/%E9%9C%80%E6%B1%82%E6%96%87%E6%A1%A3%E5%9B%BE/%E6%A6%82%E5%BF%B5%E7%B1%BB%E5%9B%BE/1.5.2.1%20%E6%90%9C%E7%B4%A2%E5%BD%B1%E7%89%87.jpg](https://raw.githubusercontent.com/cheesedogs/photos/LiuTaoIsMyProud/大作业图/需求文档图/概念类图/1.5.2.1 搜索影片.jpg)
 
 
-#### 用例3 统计预售影片想看人数
+#### 用例2 标记电影为想看
 
-![](https://raw.githubusercontent.com/D-Mer/learngit/master/%E5%A4%A7%E4%BD%9C%E4%B8%9A%E5%9B%BE/%E6%A6%82%E5%BF%B5%E7%B1%BB%E5%9B%BE/%E6%A6%82%E5%BF%B5%E7%B1%BB%E5%9B%BE-%E7%BB%9F%E8%AE%A1%E9%A2%84%E5%94%AE%E5%BD%B1%E7%89%87%E7%9A%84%E6%83%B3%E7%9C%8B%E4%BA%BA%E6%95%B0.jpg#align=left&display=inline&height=491&originHeight=493&originWidth=749&status=done&width=746)
-
-
-#### 用例4 标记影片为想看
-
-![](https://raw.githubusercontent.com/D-Mer/learngit/master/%E5%A4%A7%E4%BD%9C%E4%B8%9A%E5%9B%BE/%E6%A6%82%E5%BF%B5%E7%B1%BB%E5%9B%BE/%E6%A6%82%E5%BF%B5%E7%B1%BB%E5%9B%BE-%E6%A0%87%E8%AE%B0%E6%9F%90%E7%94%B5%E5%BD%B1%E4%B8%BA%E6%83%B3%E7%9C%8B.jpg#align=left&display=inline&height=504&originHeight=504&originWidth=721&status=done&width=721)
+![https://raw.githubusercontent.com/cheesedogs/photos/LiuTaoIsMyProud/%E5%A4%A7%E4%BD%9C%E4%B8%9A%E5%9B%BE/%E9%9C%80%E6%B1%82%E6%96%87%E6%A1%A3%E5%9B%BE/%E6%A6%82%E5%BF%B5%E7%B1%BB%E5%9B%BE/1.5.2.2%20%E6%A0%87%E8%AE%B0%E7%94%B5%E5%BD%B1%E4%B8%BA%E6%83%B3%E7%9C%8B.jpg](https://raw.githubusercontent.com/cheesedogs/photos/LiuTaoIsMyProud/大作业图/需求文档图/概念类图/1.5.2.2 标记电影为想看.jpg)
 
 
-#### 用例5 搜索电影
+#### 用例3 管理会员卡
 
-![](https://raw.githubusercontent.com/D-Mer/learngit/master/%E5%A4%A7%E4%BD%9C%E4%B8%9A%E5%9B%BE/%E6%A6%82%E5%BF%B5%E7%B1%BB%E5%9B%BE/%E6%A6%82%E5%BF%B5%E7%B1%BB%E5%9B%BE-%E6%90%9C%E7%B4%A2%E7%94%B5%E5%BD%B1(%E6%97%A5%E6%9C%9F%EF%BC%8C%E5%90%8D%E7%A7%B0%E7%AD%89).jpg#align=left&display=inline&height=488&originHeight=491&originWidth=750&status=done&width=746)
+![https://raw.githubusercontent.com/cheesedogs/photos/LiuTaoIsMyProud/%E5%A4%A7%E4%BD%9C%E4%B8%9A%E5%9B%BE/%E9%9C%80%E6%B1%82%E6%96%87%E6%A1%A3%E5%9B%BE/%E6%A6%82%E5%BF%B5%E7%B1%BB%E5%9B%BE/1.5.2.3%20%E7%AE%A1%E7%90%86%E4%BC%9A%E5%91%98%E5%8D%A1.jpg](https://raw.githubusercontent.com/cheesedogs/photos/LiuTaoIsMyProud/大作业图/需求文档图/概念类图/1.5.2.3 管理会员卡.jpg)
+
+
+#### 用例4 查看历史消费记录
+
+![https://raw.githubusercontent.com/cheesedogs/photos/LiuTaoIsMyProud/%E5%A4%A7%E4%BD%9C%E4%B8%9A%E5%9B%BE/%E9%9C%80%E6%B1%82%E6%96%87%E6%A1%A3%E5%9B%BE/%E6%A6%82%E5%BF%B5%E7%B1%BB%E5%9B%BE/1.5.2.4%20%E6%9F%A5%E7%9C%8B%E5%8E%86%E5%8F%B2%E6%B6%88%E8%B4%B9%E8%AE%B0%E5%BD%95.jpg](https://raw.githubusercontent.com/cheesedogs/photos/LiuTaoIsMyProud/大作业图/需求文档图/概念类图/1.5.2.4 查看历史消费记录.jpg)
+
+
+#### 用例5 购买电影票
+
+![https://raw.githubusercontent.com/cheesedogs/photos/LiuTaoIsMyProud/%E5%A4%A7%E4%BD%9C%E4%B8%9A%E5%9B%BE/%E9%9C%80%E6%B1%82%E6%96%87%E6%A1%A3%E5%9B%BE/%E6%A6%82%E5%BF%B5%E7%B1%BB%E5%9B%BE/1.5.2.5%20%E8%B4%AD%E4%B9%B0%E7%94%B5%E5%BD%B1%E7%A5%A8.jpg](https://raw.githubusercontent.com/cheesedogs/photos/LiuTaoIsMyProud/大作业图/需求文档图/概念类图/1.5.2.5 购买电影票.jpg)
+
+#### 用例6 查看已购电影票
+
+![https://raw.githubusercontent.com/cheesedogs/photos/LiuTaoIsMyProud/%E5%A4%A7%E4%BD%9C%E4%B8%9A%E5%9B%BE/%E9%9C%80%E6%B1%82%E6%96%87%E6%A1%A3%E5%9B%BE/%E6%A6%82%E5%BF%B5%E7%B1%BB%E5%9B%BE/1.5.2.6%20%E6%9F%A5%E7%9C%8B%E5%B7%B2%E8%B4%AD%E7%94%B5%E5%BD%B1%E7%A5%A8.jpg](https://raw.githubusercontent.com/cheesedogs/photos/LiuTaoIsMyProud/大作业图/需求文档图/概念类图/1.5.2.6 查看已购电影票.jpg)
+
+#### 用例7 退票
+
+![https://raw.githubusercontent.com/cheesedogs/photos/LiuTaoIsMyProud/%E5%A4%A7%E4%BD%9C%E4%B8%9A%E5%9B%BE/%E9%9C%80%E6%B1%82%E6%96%87%E6%A1%A3%E5%9B%BE/%E6%A6%82%E5%BF%B5%E7%B1%BB%E5%9B%BE/1.5.2.7%20%E9%80%80%E7%A5%A8.jpg](https://raw.githubusercontent.com/cheesedogs/photos/LiuTaoIsMyProud/大作业图/需求文档图/概念类图/1.5.2.7 退票.jpg)
+
+#### 用例8 观众
+
+![https://raw.githubusercontent.com/cheesedogs/photos/LiuTaoIsMyProud/%E5%A4%A7%E4%BD%9C%E4%B8%9A%E5%9B%BE/%E9%9C%80%E6%B1%82%E6%96%87%E6%A1%A3%E5%9B%BE/%E6%A6%82%E5%BF%B5%E7%B1%BB%E5%9B%BE/1.5.2.8%20%E6%9F%A5%E7%9C%8B%E7%94%B5%E5%BD%B1%E8%AF%A6%E6%83%85.jpg](https://raw.githubusercontent.com/cheesedogs/photos/LiuTaoIsMyProud/大作业图/需求文档图/概念类图/1.5.2.8 查看电影详情.jpg)
+
+#### 用例9 查看上架电影列表
+
+![https://raw.githubusercontent.com/cheesedogs/photos/LiuTaoIsMyProud/%E5%A4%A7%E4%BD%9C%E4%B8%9A%E5%9B%BE/%E9%9C%80%E6%B1%82%E6%96%87%E6%A1%A3%E5%9B%BE/%E6%A6%82%E5%BF%B5%E7%B1%BB%E5%9B%BE/1.5.2.9%20%E6%9F%A5%E7%9C%8B%E4%B8%8A%E6%9E%B6%E7%94%B5%E5%BD%B1%E5%88%97%E8%A1%A8.jpg](https://raw.githubusercontent.com/cheesedogs/photos/LiuTaoIsMyProud/大作业图/需求文档图/概念类图/1.5.2.9 查看上架电影列表.jpg)
+
+#### 用例10、11 查看排片信息
+
+![https://raw.githubusercontent.com/cheesedogs/photos/LiuTaoIsMyProud/%E5%A4%A7%E4%BD%9C%E4%B8%9A%E5%9B%BE/%E9%9C%80%E6%B1%82%E6%96%87%E6%A1%A3%E5%9B%BE/%E6%A6%82%E5%BF%B5%E7%B1%BB%E5%9B%BE/1.5.2.10%2011%20%E6%9F%A5%E7%9C%8B%E6%8E%92%E7%89%87%E4%BF%A1%E6%81%AF.jpg](https://raw.githubusercontent.com/cheesedogs/photos/LiuTaoIsMyProud/大作业图/需求文档图/概念类图/1.5.2.10 11 查看排片信息.jpg)
+
+#### 用例12 修改电影信息
+
+![https://raw.githubusercontent.com/cheesedogs/photos/LiuTaoIsMyProud/%E5%A4%A7%E4%BD%9C%E4%B8%9A%E5%9B%BE/%E9%9C%80%E6%B1%82%E6%96%87%E6%A1%A3%E5%9B%BE/%E6%A6%82%E5%BF%B5%E7%B1%BB%E5%9B%BE/1.5.2.12%20%E4%BF%AE%E6%94%B9%E7%94%B5%E5%BD%B1%E4%BF%A1%E6%81%AF.jpg](https://raw.githubusercontent.com/cheesedogs/photos/LiuTaoIsMyProud/大作业图/需求文档图/概念类图/1.5.2.12 修改电影信息.jpg)
+
+#### 用例13 上下架电影
+
+![https://raw.githubusercontent.com/cheesedogs/photos/LiuTaoIsMyProud/%E5%A4%A7%E4%BD%9C%E4%B8%9A%E5%9B%BE/%E9%9C%80%E6%B1%82%E6%96%87%E6%A1%A3%E5%9B%BE/%E6%A6%82%E5%BF%B5%E7%B1%BB%E5%9B%BE/1.5.2.13%20%E4%B8%8A%E3%80%81%E4%B8%8B%E6%9E%B6%E7%94%B5%E5%BD%B1.jpg](https://raw.githubusercontent.com/cheesedogs/photos/LiuTaoIsMyProud/大作业图/需求文档图/概念类图/1.5.2.13 上、下架电影.jpg)
+
+#### 用例14 管理排片信息
+
+![https://raw.githubusercontent.com/cheesedogs/photos/LiuTaoIsMyProud/%E5%A4%A7%E4%BD%9C%E4%B8%9A%E5%9B%BE/%E9%9C%80%E6%B1%82%E6%96%87%E6%A1%A3%E5%9B%BE/%E6%A6%82%E5%BF%B5%E7%B1%BB%E5%9B%BE/1.5.2.14%20%E7%AE%A1%E7%90%86%E6%8E%92%E7%89%87%E4%BF%A1%E6%81%AF.jpg](https://raw.githubusercontent.com/cheesedogs/photos/LiuTaoIsMyProud/大作业图/需求文档图/概念类图/1.5.2.14 管理排片信息.jpg)
+
+#### 用例15 管理排片信息观众可见时间
+
+![https://raw.githubusercontent.com/cheesedogs/photos/LiuTaoIsMyProud/%E5%A4%A7%E4%BD%9C%E4%B8%9A%E5%9B%BE/%E9%9C%80%E6%B1%82%E6%96%87%E6%A1%A3%E5%9B%BE/%E6%A6%82%E5%BF%B5%E7%B1%BB%E5%9B%BE/1.5.2.15%20%E7%AE%A1%E7%90%86%E6%8E%92%E7%89%87%E4%BF%A1%E6%81%AF%E8%A7%82%E4%BC%97%E5%8F%AF%E8%A7%81%E6%97%B6%E9%97%B4(%E8%AE%BE%E7%BD%AE%E3%80%81%E4%BF%AE%E6%94%B9).jpg](https://raw.githubusercontent.com/cheesedogs/photos/LiuTaoIsMyProud/大作业图/需求文档图/概念类图/1.5.2.15 管理排片信息观众可见时间(设置、修改).jpg)
+
+#### 用例16 查看统计数据
+
+![https://raw.githubusercontent.com/cheesedogs/photos/LiuTaoIsMyProud/%E5%A4%A7%E4%BD%9C%E4%B8%9A%E5%9B%BE/%E9%9C%80%E6%B1%82%E6%96%87%E6%A1%A3%E5%9B%BE/%E6%A6%82%E5%BF%B5%E7%B1%BB%E5%9B%BE/1.5.2.16%20%E6%9F%A5%E7%9C%8B%E7%BB%9F%E8%AE%A1%E6%95%B0%E6%8D%AE.jpg](https://raw.githubusercontent.com/cheesedogs/photos/LiuTaoIsMyProud/大作业图/需求文档图/概念类图/1.5.2.16 查看统计数据.jpg)
+
+#### 用例17 发布优惠活动
+
+![https://raw.githubusercontent.com/cheesedogs/photos/LiuTaoIsMyProud/%E5%A4%A7%E4%BD%9C%E4%B8%9A%E5%9B%BE/%E9%9C%80%E6%B1%82%E6%96%87%E6%A1%A3%E5%9B%BE/%E6%A6%82%E5%BF%B5%E7%B1%BB%E5%9B%BE/1.5.2.17%20%E5%8F%91%E5%B8%83%E4%BC%98%E6%83%A0%E6%B4%BB%E5%8A%A8.jpg](https://raw.githubusercontent.com/cheesedogs/photos/LiuTaoIsMyProud/大作业图/需求文档图/概念类图/1.5.2.17 发布优惠活动.jpg)
+
+#### 用例18 影厅信息管理
+
+![https://raw.githubusercontent.com/cheesedogs/photos/LiuTaoIsMyProud/%E5%A4%A7%E4%BD%9C%E4%B8%9A%E5%9B%BE/%E9%9C%80%E6%B1%82%E6%96%87%E6%A1%A3%E5%9B%BE/%E6%A6%82%E5%BF%B5%E7%B1%BB%E5%9B%BE/1.5.2.18%20%E5%BD%B1%E5%8E%85%E4%BF%A1%E6%81%AF%E7%AE%A1%E7%90%86.jpg](https://raw.githubusercontent.com/cheesedogs/photos/LiuTaoIsMyProud/大作业图/需求文档图/概念类图/1.5.2.18 影厅信息管理.jpg)
+
+#### 用例19 管理会员卡优惠策略（发布、修改）
+
+![https://raw.githubusercontent.com/cheesedogs/photos/LiuTaoIsMyProud/%E5%A4%A7%E4%BD%9C%E4%B8%9A%E5%9B%BE/%E9%9C%80%E6%B1%82%E6%96%87%E6%A1%A3%E5%9B%BE/%E6%A6%82%E5%BF%B5%E7%B1%BB%E5%9B%BE/1.5.2.19%20%E4%BC%9A%E5%91%98%E5%8D%A1%E4%BC%98%E6%83%A0%E7%AD%96%E7%95%A5(%E5%8F%91%E5%B8%83%E3%80%81%E4%BF%AE%E6%94%B9).jpg](https://raw.githubusercontent.com/cheesedogs/photos/LiuTaoIsMyProud/大作业图/需求文档图/概念类图/1.5.2.19 会员卡优惠策略(发布、修改).jpg)
+
+#### 用例20 赠送优惠券
+
+![https://raw.githubusercontent.com/cheesedogs/photos/LiuTaoIsMyProud/%E5%A4%A7%E4%BD%9C%E4%B8%9A%E5%9B%BE/%E9%9C%80%E6%B1%82%E6%96%87%E6%A1%A3%E5%9B%BE/%E6%A6%82%E5%BF%B5%E7%B1%BB%E5%9B%BE/1.5.2.20%20%E8%B5%A0%E9%80%81%E4%BC%98%E6%83%A0%E5%88%B8.jpg](https://raw.githubusercontent.com/cheesedogs/photos/LiuTaoIsMyProud/大作业图/需求文档图/概念类图/1.5.2.20 赠送优惠券.jpg)
+
+#### 用例21 管理退票策略（设置、修改）
+
+![https://raw.githubusercontent.com/cheesedogs/photos/LiuTaoIsMyProud/%E5%A4%A7%E4%BD%9C%E4%B8%9A%E5%9B%BE/%E9%9C%80%E6%B1%82%E6%96%87%E6%A1%A3%E5%9B%BE/%E6%A6%82%E5%BF%B5%E7%B1%BB%E5%9B%BE/1.5.2.21%20%E7%AE%A1%E7%90%86%E9%80%80%E7%A5%A8%E7%AD%96%E7%95%A5(%E8%AE%BE%E7%BD%AE%E3%80%81%E4%BF%AE%E6%94%B9).jpg](https://raw.githubusercontent.com/cheesedogs/photos/LiuTaoIsMyProud/大作业图/需求文档图/概念类图/1.5.2.21 管理退票策略(设置、修改).jpg)
+
+#### 用例22 管理影院角色
+
+![https://raw.githubusercontent.com/cheesedogs/photos/LiuTaoIsMyProud/%E5%A4%A7%E4%BD%9C%E4%B8%9A%E5%9B%BE/%E9%9C%80%E6%B1%82%E6%96%87%E6%A1%A3%E5%9B%BE/%E6%A6%82%E5%BF%B5%E7%B1%BB%E5%9B%BE/1.5.2.22%20%E7%AE%A1%E7%90%86%E5%BD%B1%E9%99%A2%E8%A7%92%E8%89%B2.jpg](https://raw.githubusercontent.com/cheesedogs/photos/LiuTaoIsMyProud/大作业图/需求文档图/概念类图/1.5.2.22 管理影院角色.jpg)
 
 
 ### 5.3状态图
 
 
-#### 用例1 上架影片
+#### 用例1 搜索电影
 
-![](https://raw.githubusercontent.com/D-Mer/learngit/master/%E5%A4%A7%E4%BD%9C%E4%B8%9A%E5%9B%BE/%E7%B3%BB%E7%BB%9F%E7%8A%B6%E6%80%81%E5%9B%BE/%E7%B3%BB%E7%BB%9F%E7%8A%B6%E6%80%81%E5%9B%BE-%E4%B8%8A%E6%9E%B6%E5%BD%B1%E7%89%87.jpg#align=left&display=inline&height=308&originHeight=530&originWidth=1282&status=done&width=746)
-
-
-#### 用例2 查看影片详情
-
-![](https://raw.githubusercontent.com/D-Mer/learngit/master/%E5%A4%A7%E4%BD%9C%E4%B8%9A%E5%9B%BE/%E7%B3%BB%E7%BB%9F%E7%8A%B6%E6%80%81%E5%9B%BE/%E7%B3%BB%E7%BB%9F%E7%8A%B6%E6%80%81%E5%9B%BE-%E6%9F%A5%E7%9C%8B%E5%BD%B1%E7%89%87%E8%AF%A6%E6%83%85.jpg#align=left&display=inline&height=351&originHeight=589&originWidth=1252&status=done&width=746)
+![https://raw.githubusercontent.com/cheesedogs/photos/LiuTaoIsMyProud/%E5%A4%A7%E4%BD%9C%E4%B8%9A%E5%9B%BE/%E9%9C%80%E6%B1%82%E6%96%87%E6%A1%A3%E5%9B%BE/%E7%B3%BB%E7%BB%9F%E7%8A%B6%E6%80%81%E5%9B%BE/1.5.3.1%20%E6%90%9C%E7%B4%A2%E7%94%B5%E5%BD%B1.jpg](https://raw.githubusercontent.com/cheesedogs/photos/LiuTaoIsMyProud/大作业图/需求文档图/系统状态图/1.5.3.1 搜索电影.jpg)
 
 
-#### 用例3 统计预售影片想看人数
+#### 用例2 标记电影为想看
 
-![](https://raw.githubusercontent.com/D-Mer/learngit/master/%E5%A4%A7%E4%BD%9C%E4%B8%9A%E5%9B%BE/%E7%B3%BB%E7%BB%9F%E7%8A%B6%E6%80%81%E5%9B%BE/%E7%B3%BB%E7%BB%9F%E7%8A%B6%E6%80%81%E5%9B%BE-%E6%90%9C%E7%B4%A2%E7%94%B5%E5%BD%B1(%E6%97%A5%E6%9C%9F%EF%BC%8C%E5%90%8D%E7%A7%B0%E7%AD%89).jpg#align=left&display=inline&height=401&originHeight=538&originWidth=1001&status=done&width=746)
-
-
-#### 用例4 标记影片为想看
-
-![](https://raw.githubusercontent.com/D-Mer/learngit/master/%E5%A4%A7%E4%BD%9C%E4%B8%9A%E5%9B%BE/%E7%B3%BB%E7%BB%9F%E7%8A%B6%E6%80%81%E5%9B%BE/%E7%B3%BB%E7%BB%9F%E7%8A%B6%E6%80%81%E5%9B%BE-%E6%A0%87%E8%AE%B0%E5%BD%B1%E7%89%87%E4%B8%BA%E6%83%B3%E7%9C%8B.jpg#align=left&display=inline&height=449&originHeight=473&originWidth=786&status=done&width=746)
+![https://raw.githubusercontent.com/cheesedogs/photos/LiuTaoIsMyProud/%E5%A4%A7%E4%BD%9C%E4%B8%9A%E5%9B%BE/%E9%9C%80%E6%B1%82%E6%96%87%E6%A1%A3%E5%9B%BE/%E7%B3%BB%E7%BB%9F%E7%8A%B6%E6%80%81%E5%9B%BE/1.5.3.2%20%E6%A0%87%E8%AE%B0%E7%94%B5%E5%BD%B1%E4%B8%BA%E6%83%B3%E7%9C%8B.jpg](https://raw.githubusercontent.com/cheesedogs/photos/LiuTaoIsMyProud/大作业图/需求文档图/系统状态图/1.5.3.2 标记电影为想看.jpg)
 
 
-#### 用例5 搜索电影
+#### 用例3 管理会员卡
 
-![](https://raw.githubusercontent.com/D-Mer/learngit/master/%E5%A4%A7%E4%BD%9C%E4%B8%9A%E5%9B%BE/%E7%B3%BB%E7%BB%9F%E7%8A%B6%E6%80%81%E5%9B%BE/%E7%B3%BB%E7%BB%9F%E7%8A%B6%E6%80%81%E5%9B%BE-%E8%B4%AD%E7%A5%A8.jpg#align=left&display=inline&height=522&originHeight=522&originWidth=521&status=done&width=521)
+![https://raw.githubusercontent.com/cheesedogs/photos/LiuTaoIsMyProud/%E5%A4%A7%E4%BD%9C%E4%B8%9A%E5%9B%BE/%E9%9C%80%E6%B1%82%E6%96%87%E6%A1%A3%E5%9B%BE/%E7%B3%BB%E7%BB%9F%E7%8A%B6%E6%80%81%E5%9B%BE/1.5.3.3%20%E7%AE%A1%E7%90%86%E4%BC%9A%E5%91%98%E5%8D%A1.jpg](https://raw.githubusercontent.com/cheesedogs/photos/LiuTaoIsMyProud/大作业图/需求文档图/系统状态图/1.5.3.3 管理会员卡.jpg)
+
+
+#### 用例4 查看历史消费记录
+
+![https://raw.githubusercontent.com/cheesedogs/photos/LiuTaoIsMyProud/%E5%A4%A7%E4%BD%9C%E4%B8%9A%E5%9B%BE/%E9%9C%80%E6%B1%82%E6%96%87%E6%A1%A3%E5%9B%BE/%E7%B3%BB%E7%BB%9F%E7%8A%B6%E6%80%81%E5%9B%BE/1.5.3.4%20%E6%9F%A5%E7%9C%8B%E5%8E%86%E5%8F%B2%E6%B6%88%E8%B4%B9%E8%AE%B0%E5%BD%95.jpg](https://raw.githubusercontent.com/cheesedogs/photos/LiuTaoIsMyProud/大作业图/需求文档图/系统状态图/1.5.3.4 查看历史消费记录.jpg)
+
+
+#### 用例5 购买电影票
+
+![https://raw.githubusercontent.com/cheesedogs/photos/LiuTaoIsMyProud/%E5%A4%A7%E4%BD%9C%E4%B8%9A%E5%9B%BE/%E9%9C%80%E6%B1%82%E6%96%87%E6%A1%A3%E5%9B%BE/%E7%B3%BB%E7%BB%9F%E7%8A%B6%E6%80%81%E5%9B%BE/1.5.3.5%20%E8%B4%AD%E4%B9%B0%E7%94%B5%E5%BD%B1%E7%A5%A8.jpg](https://raw.githubusercontent.com/cheesedogs/photos/LiuTaoIsMyProud/大作业图/需求文档图/系统状态图/1.5.3.5 购买电影票.jpg)
+
+#### 用例6 查看已购电影票
+
+![https://raw.githubusercontent.com/cheesedogs/photos/LiuTaoIsMyProud/%E5%A4%A7%E4%BD%9C%E4%B8%9A%E5%9B%BE/%E9%9C%80%E6%B1%82%E6%96%87%E6%A1%A3%E5%9B%BE/%E7%B3%BB%E7%BB%9F%E7%8A%B6%E6%80%81%E5%9B%BE/1.5.3.6%20%E6%9F%A5%E7%9C%8B%E5%B7%B2%E8%B4%AD%E7%94%B5%E5%BD%B1%E7%A5%A8.jpg](https://raw.githubusercontent.com/cheesedogs/photos/LiuTaoIsMyProud/大作业图/需求文档图/系统状态图/1.5.3.6 查看已购电影票.jpg)
+
+#### 用例7 退票
+
+![https://raw.githubusercontent.com/cheesedogs/photos/LiuTaoIsMyProud/%E5%A4%A7%E4%BD%9C%E4%B8%9A%E5%9B%BE/%E9%9C%80%E6%B1%82%E6%96%87%E6%A1%A3%E5%9B%BE/%E7%B3%BB%E7%BB%9F%E7%8A%B6%E6%80%81%E5%9B%BE/1.5.3.7%20%E9%80%80%E7%A5%A8.jpg](https://raw.githubusercontent.com/cheesedogs/photos/LiuTaoIsMyProud/大作业图/需求文档图/系统状态图/1.5.3.7 退票.jpg)
+
+#### 用例8 查看影片详情
+
+![https://raw.githubusercontent.com/cheesedogs/photos/LiuTaoIsMyProud/%E5%A4%A7%E4%BD%9C%E4%B8%9A%E5%9B%BE/%E9%9C%80%E6%B1%82%E6%96%87%E6%A1%A3%E5%9B%BE/%E7%B3%BB%E7%BB%9F%E7%8A%B6%E6%80%81%E5%9B%BE/1.5.3.8%20%E6%9F%A5%E7%9C%8B%E5%BD%B1%E7%89%87%E8%AF%A6%E6%83%85.jpg](https://raw.githubusercontent.com/cheesedogs/photos/LiuTaoIsMyProud/大作业图/需求文档图/系统状态图/1.5.3.8 查看影片详情.jpg)
+
+#### 用例9 查看已上架电影
+
+![https://raw.githubusercontent.com/cheesedogs/photos/LiuTaoIsMyProud/%E5%A4%A7%E4%BD%9C%E4%B8%9A%E5%9B%BE/%E9%9C%80%E6%B1%82%E6%96%87%E6%A1%A3%E5%9B%BE/%E7%B3%BB%E7%BB%9F%E7%8A%B6%E6%80%81%E5%9B%BE/1.5.3.9%20%E6%9F%A5%E7%9C%8B%E5%B7%B2%E4%B8%8A%E6%9E%B6%E7%94%B5%E5%BD%B1.jpg](https://raw.githubusercontent.com/cheesedogs/photos/LiuTaoIsMyProud/大作业图/需求文档图/系统状态图/1.5.3.9 查看已上架电影.jpg)
+
+#### 用例10 查看排片信息（影厅视角）
+
+![https://raw.githubusercontent.com/cheesedogs/photos/LiuTaoIsMyProud/%E5%A4%A7%E4%BD%9C%E4%B8%9A%E5%9B%BE/%E9%9C%80%E6%B1%82%E6%96%87%E6%A1%A3%E5%9B%BE/%E7%B3%BB%E7%BB%9F%E7%8A%B6%E6%80%81%E5%9B%BE/1.5.3.10%20%E6%9F%A5%E7%9C%8B%E6%8E%92%E7%89%87%E4%BF%A1%E6%81%AF(%E5%BD%B1%E5%8E%85%E8%A7%86%E8%A7%92).jpg](https://raw.githubusercontent.com/cheesedogs/photos/LiuTaoIsMyProud/大作业图/需求文档图/系统状态图/1.5.3.10 查看排片信息(影厅视角).jpg)
+
+#### 用例11 查看排片信息（影片视角）
+
+![https://raw.githubusercontent.com/cheesedogs/photos/LiuTaoIsMyProud/%E5%A4%A7%E4%BD%9C%E4%B8%9A%E5%9B%BE/%E9%9C%80%E6%B1%82%E6%96%87%E6%A1%A3%E5%9B%BE/%E7%B3%BB%E7%BB%9F%E7%8A%B6%E6%80%81%E5%9B%BE/1.5.3.11%20%E6%9F%A5%E7%9C%8B%E6%8E%92%E7%89%87%E4%BF%A1%E6%81%AF.jpg](https://raw.githubusercontent.com/cheesedogs/photos/LiuTaoIsMyProud/大作业图/需求文档图/系统状态图/1.5.3.11 查看排片信息.jpg)
+
+#### 用例12 修改电影信息
+
+![https://raw.githubusercontent.com/cheesedogs/photos/LiuTaoIsMyProud/%E5%A4%A7%E4%BD%9C%E4%B8%9A%E5%9B%BE/%E9%9C%80%E6%B1%82%E6%96%87%E6%A1%A3%E5%9B%BE/%E7%B3%BB%E7%BB%9F%E7%8A%B6%E6%80%81%E5%9B%BE/1.5.3.12%20%E4%BF%AE%E6%94%B9%E7%94%B5%E5%BD%B1%E4%BF%A1%E6%81%AF.jpg](https://raw.githubusercontent.com/cheesedogs/photos/LiuTaoIsMyProud/大作业图/需求文档图/系统状态图/1.5.3.12 修改电影信息.jpg)
+
+#### 用例13 上、下架电影
+
+![https://raw.githubusercontent.com/cheesedogs/photos/LiuTaoIsMyProud/%E5%A4%A7%E4%BD%9C%E4%B8%9A%E5%9B%BE/%E9%9C%80%E6%B1%82%E6%96%87%E6%A1%A3%E5%9B%BE/%E7%B3%BB%E7%BB%9F%E7%8A%B6%E6%80%81%E5%9B%BE/1.5.3.13%20%E4%B8%8A%E3%80%81%E4%B8%8B%E6%9E%B6%E7%94%B5%E5%BD%B1.jpg](https://raw.githubusercontent.com/cheesedogs/photos/LiuTaoIsMyProud/大作业图/需求文档图/系统状态图/1.5.3.13 上、下架电影.jpg)
+
+#### 用例14 管理排片信息（增、删、改）
+
+![https://raw.githubusercontent.com/cheesedogs/photos/LiuTaoIsMyProud/%E5%A4%A7%E4%BD%9C%E4%B8%9A%E5%9B%BE/%E9%9C%80%E6%B1%82%E6%96%87%E6%A1%A3%E5%9B%BE/%E7%B3%BB%E7%BB%9F%E7%8A%B6%E6%80%81%E5%9B%BE/1.5.3.14%20%E7%AE%A1%E7%90%86%E6%8E%92%E7%89%87%E4%BF%A1%E6%81%AF(%E5%A2%9E%E3%80%81%E5%88%A0%E3%80%81%E6%94%B9).jpg](https://raw.githubusercontent.com/cheesedogs/photos/LiuTaoIsMyProud/大作业图/需求文档图/系统状态图/1.5.3.14 管理排片信息(增、删、改).jpg)
+
+#### 用例15 管理排片信息观众可见时间（设置、修改）
+
+![https://raw.githubusercontent.com/cheesedogs/photos/LiuTaoIsMyProud/%E5%A4%A7%E4%BD%9C%E4%B8%9A%E5%9B%BE/%E9%9C%80%E6%B1%82%E6%96%87%E6%A1%A3%E5%9B%BE/%E7%B3%BB%E7%BB%9F%E7%8A%B6%E6%80%81%E5%9B%BE/1.5.3.15%20%E7%AE%A1%E7%90%86%E6%8E%92%E7%89%87%E4%BF%A1%E6%81%AF%E8%A7%82%E4%BC%97%E5%8F%AF%E8%A7%81%E6%97%B6%E9%97%B4(%E8%AE%BE%E7%BD%AE%E3%80%81%E4%BF%AE%E6%94%B9).jpg](https://raw.githubusercontent.com/cheesedogs/photos/LiuTaoIsMyProud/大作业图/需求文档图/系统状态图/1.5.3.15 管理排片信息观众可见时间(设置、修改).jpg)
+
+#### 用例16 查看统计数据
+
+![https://raw.githubusercontent.com/cheesedogs/photos/LiuTaoIsMyProud/%E5%A4%A7%E4%BD%9C%E4%B8%9A%E5%9B%BE/%E9%9C%80%E6%B1%82%E6%96%87%E6%A1%A3%E5%9B%BE/%E7%B3%BB%E7%BB%9F%E7%8A%B6%E6%80%81%E5%9B%BE/1.5.3.16%20%E6%9F%A5%E7%9C%8B%E7%BB%9F%E8%AE%A1%E6%95%B0%E6%8D%AE.jpg](https://raw.githubusercontent.com/cheesedogs/photos/LiuTaoIsMyProud/大作业图/需求文档图/系统状态图/1.5.3.16 查看统计数据.jpg)
+
+#### 用例17 发布优惠活动
+
+![https://raw.githubusercontent.com/cheesedogs/photos/LiuTaoIsMyProud/%E5%A4%A7%E4%BD%9C%E4%B8%9A%E5%9B%BE/%E9%9C%80%E6%B1%82%E6%96%87%E6%A1%A3%E5%9B%BE/%E7%B3%BB%E7%BB%9F%E7%8A%B6%E6%80%81%E5%9B%BE/1.5.3.17%20%E5%8F%91%E5%B8%83%E4%BC%98%E6%83%A0%E6%B4%BB%E5%8A%A8.jpg](https://raw.githubusercontent.com/cheesedogs/photos/LiuTaoIsMyProud/大作业图/需求文档图/系统状态图/1.5.3.17 发布优惠活动.jpg)
+
+#### 用例18 影厅信息管理
+
+![https://raw.githubusercontent.com/cheesedogs/photos/LiuTaoIsMyProud/%E5%A4%A7%E4%BD%9C%E4%B8%9A%E5%9B%BE/%E9%9C%80%E6%B1%82%E6%96%87%E6%A1%A3%E5%9B%BE/%E7%B3%BB%E7%BB%9F%E7%8A%B6%E6%80%81%E5%9B%BE/1.5.3.18%20%E5%BD%B1%E5%8E%85%E4%BF%A1%E6%81%AF%E7%AE%A1%E7%90%86.jpg](https://raw.githubusercontent.com/cheesedogs/photos/LiuTaoIsMyProud/大作业图/需求文档图/系统状态图/1.5.3.18 影厅信息管理.jpg)
+
+#### 用例19 管理会员卡优惠策略
+
+![https://raw.githubusercontent.com/cheesedogs/photos/LiuTaoIsMyProud/%E5%A4%A7%E4%BD%9C%E4%B8%9A%E5%9B%BE/%E9%9C%80%E6%B1%82%E6%96%87%E6%A1%A3%E5%9B%BE/%E7%B3%BB%E7%BB%9F%E7%8A%B6%E6%80%81%E5%9B%BE/1.5.3.19%20%E7%AE%A1%E7%90%86%E4%BC%9A%E5%91%98%E5%8D%A1%E4%BC%98%E6%83%A0%E7%AD%96%E7%95%A5.jpg](https://raw.githubusercontent.com/cheesedogs/photos/LiuTaoIsMyProud/大作业图/需求文档图/系统状态图/1.5.3.19 管理会员卡优惠策略.jpg)
+
+#### 用例20 赠送优惠券
+
+![https://raw.githubusercontent.com/cheesedogs/photos/LiuTaoIsMyProud/%E5%A4%A7%E4%BD%9C%E4%B8%9A%E5%9B%BE/%E9%9C%80%E6%B1%82%E6%96%87%E6%A1%A3%E5%9B%BE/%E7%B3%BB%E7%BB%9F%E7%8A%B6%E6%80%81%E5%9B%BE/1.5.3.20%20%E8%B5%A0%E9%80%81%E4%BC%98%E6%83%A0%E5%88%B8.jpg](https://raw.githubusercontent.com/cheesedogs/photos/LiuTaoIsMyProud/大作业图/需求文档图/系统状态图/1.5.3.20 赠送优惠券.jpg)
+
+#### 用例21 管理退票策略
+
+![https://raw.githubusercontent.com/cheesedogs/photos/LiuTaoIsMyProud/%E5%A4%A7%E4%BD%9C%E4%B8%9A%E5%9B%BE/%E9%9C%80%E6%B1%82%E6%96%87%E6%A1%A3%E5%9B%BE/%E7%B3%BB%E7%BB%9F%E7%8A%B6%E6%80%81%E5%9B%BE/1.5.3.21%20%E7%AE%A1%E7%90%86%E9%80%80%E7%A5%A8%E7%AD%96%E7%95%A5.jpg](https://raw.githubusercontent.com/cheesedogs/photos/LiuTaoIsMyProud/大作业图/需求文档图/系统状态图/1.5.3.21 管理退票策略.jpg)
+
+#### 用例22 管理影院角色
+
+![https://raw.githubusercontent.com/cheesedogs/photos/LiuTaoIsMyProud/%E5%A4%A7%E4%BD%9C%E4%B8%9A%E5%9B%BE/%E9%9C%80%E6%B1%82%E6%96%87%E6%A1%A3%E5%9B%BE/%E7%B3%BB%E7%BB%9F%E7%8A%B6%E6%80%81%E5%9B%BE/1.5.3.22%20%E7%AE%A1%E7%90%86%E5%BD%B1%E9%99%A2%E8%A7%92%E8%89%B2.jpg](https://raw.githubusercontent.com/cheesedogs/photos/LiuTaoIsMyProud/大作业图/需求文档图/系统状态图/1.5.3.22 管理影院角色.jpg)
